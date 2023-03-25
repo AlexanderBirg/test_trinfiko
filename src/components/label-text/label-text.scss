@@ -6,6 +6,7 @@
   &__label {
     margin-bottom: 10px;
     color: #9b9898;
+    font-weight: 400;
     font-size: 12px;
 
     @include sm {
@@ -16,6 +17,7 @@
 
   &__text {
     color: $primary;
+    font-weight: 400;
     font-size: 16px;
     transition: all $duration ease;
 

@@ -71,6 +71,7 @@
     {# end header #}
     
     <div class="page__content">
+      {% set breadCrumbsFirstCrumb = 'Список страниц' %}
       {% set breadCrumbsList = [
         {
             'text': 'Примеры',
@@ -196,7 +197,7 @@
         <div class="wrapper childs-margin-right flex-row">
 
           <a href="" class="button button--fill button--round-icon">
-            <span class="button__round-icon round-icon round-icon--default round-icon--user round-icon--dark">
+            <span class="button__round-icon round-icon round-icon--small round-icon--default round-icon--user round-icon--dark">
               <div class="round-icon__wrapper">
                 <svg class="round-icon__icon round-icon__icon--user inline-svg">
                   <use xlink:href="images/sprite.svg#user"></use>
@@ -293,19 +294,7 @@
           <div><a class="link" href="">Полные тарифы брокера (PDF)</a></div>
           <div><span class="link">Полные тарифы брокера (PDF)</span></div>
 
-          <div class="label-text">
-            <span class="label-text__label">
-              Телефон
-            </span>
-            <a href="tel:+74957272500" class="label-text__text label-text__text--black">+ 7 495 727 25 00</a>
-          </div>
-
-          <div class="label-text">
-            <span class="label-text__label">
-              Электронная почта
-            </span>
-            <a href="mailto:info@trinfico.com" class="link label-text__text">info@trinfico.com</a>
-          </div>
+          {% include "./components/label-text/label-text.html" %}
 
           <button class="button button--fill" data-hystmodal="#message-modal">
             <span class="button__text">
@@ -324,6 +313,8 @@
               Модалка Резюме
             </span>
           </button>
+
+          {% include "./components/invest-card/invest-card.html" %}
         </div>
       </section>
     </div>

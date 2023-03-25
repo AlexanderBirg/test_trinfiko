@@ -45,6 +45,7 @@
   &__title {
     margin-bottom: 9px;
     color: black;
+    font-weight: 400;
     font-size: 14px;
     line-height: 24px;
 
@@ -81,7 +82,8 @@
 
     @include sm {
       flex-direction: row;
-      margin-left: 82px;
+      margin-left: auto;
+      font-weight: 400;
       font-size: 12px;
     }
   }
@@ -90,6 +92,7 @@
     flex: 0 0 auto;
     margin-bottom: 12px;
     color: rgba($color: #000, $alpha: 0.5);
+    font-weight: 400;
     font-size: 10px;
     line-height: 12px;
     text-transform: uppercase;
@@ -104,6 +107,7 @@
   &__size {
     flex: 0 0 auto;
     color: rgba($color: #000, $alpha: 0.5);
+    font-weight: 400;
     font-size: 10px;
     text-transform: uppercase;
 

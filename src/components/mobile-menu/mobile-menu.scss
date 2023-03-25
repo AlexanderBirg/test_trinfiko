@@ -69,6 +69,7 @@
   &__copyright {
     margin-bottom: 7px;
     color: rgba($color: #000, $alpha: 0.5);
+    font-weight: 400;
     font-size: 12px;
     line-height: 22px;
 
@@ -79,6 +80,7 @@
 
   &__privacy {
     color: rgba($color: #000, $alpha: 0.5);
+    font-weight: 400;
     font-size: 12px;
     line-height: 22px;
     text-decoration: underline;
@@ -153,6 +155,7 @@
 
   &__nav-link {
     color: black;
+    font-weight: 400;
     font-size: 14px;
 
     @include sm {
@@ -220,6 +223,7 @@
   }
 
   &__address {
+    font-weight: 400;
     font-size: 18px;
     line-height: 26px;
 
@@ -236,6 +240,7 @@
 
     &-text {
       display: none;
+      font-weight: 400;
       font-size: 12px;
       line-height: 16px;
       text-transform: uppercase;
