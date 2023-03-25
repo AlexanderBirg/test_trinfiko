@@ -9,7 +9,8 @@
     "no-param-reassign": "off",
     "no-plusplus": "off",
     "max-len": ["error", { "code": 160 }],
-    "no-unused-vars": ["error", { "varsIgnorePattern": "[iI]gnored" }]
+    "no-unused-vars": ["error", { "varsIgnorePattern": "[iI]gnored" }],
+    "no-console": "off"
   },
   "env": {
     "browser": true,

@@ -2,7 +2,7 @@
 <html lang="ru">
   <head>
     {% set pageTitle = 'ТРИНФИКО – независимый брокер' %}
-    {% include "./components/head/head.html" %}
+    {% include "./components/complex/head/head.html" %}
   </head>
 
   <style>
@@ -63,11 +63,11 @@
   </style>
   <body class="page">
 
-    {% include "./components/preloader/preloader.html" %}
+    {% include "./components/complex/preloader/preloader.html" %}
 
     {# begin header #}
-    {% include "./components/header/header.html" %}
-    {% include "./components/mobile-menu/mobile-menu.html" %}
+    {% include "./components/complex/header/header.html" %}
+    {% include "./components/complex/mobile-menu/mobile-menu.html" %}
     {# end header #}
     
     <div class="page__content">
@@ -78,7 +78,7 @@
             'url': '\\'
         }
       ] %}
-      {% include "./components/bread-crumbs/bread-crumbs.html" %}
+      {% include "./components/complex/bread-crumbs/bread-crumbs.html" %}
 
 
       <section>
@@ -294,7 +294,7 @@
           <div><a class="link" href="">Полные тарифы брокера (PDF)</a></div>
           <div><span class="link">Полные тарифы брокера (PDF)</span></div>
 
-          {% include "./components/label-text/label-text.html" %}
+          {% include "./components/embedded/label-text/label-text.html" %}
 
           <button class="button button--fill" data-hystmodal="#message-modal">
             <span class="button__text">
@@ -314,19 +314,19 @@
             </span>
           </button>
 
-          {% include "./components/invest-card/invest-card.html" %}
+          {% include "./components/embedded/invest-card/invest-card.html" %}
         </div>
       </section>
     </div>
 
     {# begin footer #}
-    {% include "./components/footer/footer.html" %}
+    {% include "./components/complex/footer/footer.html" %}
     {# end footer #}
 
     {# begin modals #}
-    {% include "./components/hystmodal-question/hystmodal-question.html" %}
-    {% include "./components/hystmodal-rezume/hystmodal-rezume.html" %}
-    {% include "./components/hystmodal-message/hystmodal-message.html" %}
+    {% include "./components/embedded/hystmodal-question/hystmodal-question.html" %}
+    {% include "./components/embedded/hystmodal-rezume/hystmodal-rezume.html" %}
+    {% include "./components/embedded/hystmodal-message/hystmodal-message.html" %}
     {# end modals #}
   </body>
 </html>

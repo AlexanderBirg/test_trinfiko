@@ -2,39 +2,39 @@
 <html lang="ru">
   <head>
     {% set pageTitle = 'ТРИНФИКО – независимый брокер' %}
-    {% include "./components/head/head.html" %}
+    {% include "./components/complex/head/head.html" %}
   </head>
 
   <body class="page">
 
-    {% include "./components/preloader/preloader.html" %}
+    {% include "./components/complex/preloader/preloader.html" %}
 
     {# begin header #}
-    {% include "./components/header/header.html" %}
-    {% include "./components/mobile-menu/mobile-menu.html" %}
+    {% include "./components/complex/header/header.html" %}
+    {% include "./components/complex/mobile-menu/mobile-menu.html" %}
     {# end header #}
 
     <div class="page__content">
 
-      {% include "./components/hero/hero.html" %}
+      {% include "./components/complex/hero/hero.html" %}
 
-      {% include "./components/invest/invest.html" %}
+      {% include "./components/complex/invest/invest.html" %}
 
-      {% include "./components/advantages/advantages.html" %}
+      {% include "./components/complex/advantages/advantages.html" %}
 
-      {% include "./components/licenses/licenses.html" %}
+      {% include "./components/complex/licenses/licenses.html" %}
 
-      {% include "./components/feedback/feedback.html" %}
+      {% include "./components/complex/feedback/feedback.html" %}
 
     </div>
 
     {# begin footer #}
-    {% include "./components/footer/footer.html" %}
+    {% include "./components/complex/footer/footer.html" %}
     {# end footer #}
 
     {# begin modals #}
-    {% include "./components/hystmodal-question/hystmodal-question.html" %}
-    {% include "./components/hystmodal-message/hystmodal-message.html" %}
+    {% include "./components/embedded/hystmodal-question/hystmodal-question.html" %}
+    {% include "./components/embedded/hystmodal-message/hystmodal-message.html" %}
     {# end modals #}
   </body>
 </html>

@@ -1,8 +1,23 @@
 import LazyLoad from 'vanilla-lazyload';
-import './components/preloader/preloader.js';
+import jump from 'jump.js';
+
+import './components/complex/preloader/preloader.js';
 import './services/custom-libs/hystmodal/hystmodal.js';
-import './components/header/header.js';
-import './components/form/form.js';
+import './components/complex/header/header.js';
+import './components/embedded/form/form.js';
+
+// ПЛАВНАЯ ПРОКРУТКА К ЭЛЕМЕНТАМ
+const anchors = document.querySelectorAll('[data-my-anchor]');
+
+if (anchors) {
+  anchors.forEach((item) => {
+    item.onclick = () => {
+      jump(item.getAttribute('data-my-anchor'), {
+        offset: -60, // насколько не докрутить до нужного элемента (н-р, при фиксированном меню)
+      });
+    };
+  });
+}
 
 // МОДАЛКИ
 const myModalIgnored = new window.HystModal({
