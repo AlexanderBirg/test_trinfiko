@@ -1,0 +1,92 @@
+<style>
+  /* начальное состояние элемента */
+  .rotate-y {
+    transform: perspective(800px) rotateY(0deg);
+    transform-style: preserve-3d;
+  }
+
+  /* анимация вращения по оси Y */
+  @keyframes rotate-y-animation {
+    0% {
+      transform: perspective(800px) rotateY(0deg);
+    }
+    100% {
+      transform: perspective(800px) rotateY(360deg);
+    }
+  }
+
+  /* добавляем анимацию к элементу */
+  .rotate-y {
+    animation-name: rotate-y-animation;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+
+  .preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.4s;
+  }
+
+  .preloader--active {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .preloader__container {
+    position: absolute;
+    left: 50%;
+    top: 36%;
+    transform: translateX(-50%);
+    width: 73px;
+    height: 79px;
+  }
+
+  .preloader__icon {
+    width: 100%;
+    height: 100%;
+    fill: #122d59;
+  }
+
+  .preloader__text {
+    position: absolute;
+    left: 50%;
+    bottom: -181px;
+    transform: translateX(-50%);
+    color: black;
+    font-size: 14px;
+    text-transform: uppercase;
+  }
+
+  @media (min-width: 767.98px) {
+    .preloader__container {
+      top: 50%;
+      width: 117px;
+      height: 127px;
+    transform: translate(-50%, -50%);
+    }
+
+    .preloader__text {
+      bottom: -148px;
+    }
+  }
+</style>
+
+<section class="preloader preloader--active">
+  <div class="preloader__container">
+    <svg class="preloader__icon rotate-y">
+      <use xlink:href="images/sprite.svg#trinfiko"></use>
+    </svg>
+    <div class="preloader__text">
+      Загрузка
+    </div>
+  </div>
+</section>

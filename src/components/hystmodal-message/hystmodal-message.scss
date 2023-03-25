@@ -1,0 +1,37 @@
+.hystmodal-message {
+  &__text {
+    margin-bottom: 38px;
+    font-size: 14px;
+    line-height: 22px;
+
+    @include sm {
+      margin-bottom: 41px;
+      font-size: 16px;
+      line-height: 26px;
+    }
+  }
+
+  &__button {
+    height: 45px;
+
+    @include sm {
+      height: 50px;
+    }
+  }
+
+  &__letter-icon {
+    position: absolute;
+    right: 20px;
+    bottom: 54px;
+    width: 68px;
+    height: 38px;
+    fill: #d5d5d5;
+
+    @include sm {
+      right: 80px;
+      bottom: 66px;
+      width: 88px;
+      height: 49px;
+    }
+  }
+}

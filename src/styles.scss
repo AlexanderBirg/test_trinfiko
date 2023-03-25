@@ -1,0 +1,45 @@
+// services
+@import "services/consts/consts.scss";
+@import "services/fonts/fonts.scss";
+@import "services/mixins/mixins.scss";
+
+// elements
+@import "elements/hystmodal.scss";
+@import "elements/page.scss";
+@import "elements/wrapper.scss";
+@import "elements/none.scss";
+@import "elements/inline-svg.scss";
+@import "elements/main-logo.scss";
+@import "elements/round-icon.scss";
+@import "elements/phone.scss";
+@import "elements/label-text.scss";
+@import "elements/file-card.scss";
+@import "elements/gorizontal-nav.scss";
+@import "elements/odone.scss";
+@import "elements/img-cover.scss";
+@import "elements/invest-card.scss";
+@import "elements/naufor-icon.scss";
+@import "elements/animations.scss";
+@import "elements/hidden.scss";
+
+// ui
+@import "elements/ui/title.scss";
+@import "elements/ui/button.scss";
+@import "elements/ui/link.scss";
+@import "elements/ui/form/input-block.scss";
+@import "elements/ui/form/textarea-block.scss";
+@import "elements/ui/form/upload-block.scss";
+
+// components
+@import "components/hystmodal-message/hystmodal-message.scss";
+@import "components/hystmodal-question/hystmodal-question.scss";
+@import "components/header/header.scss";
+@import "components/footer/footer.scss";
+@import "components/bread-crumbs/bread-crumbs.scss";
+@import "components/mobile-menu/mobile-menu.scss";
+@import "components/form/form.scss";
+@import "components/feedback/feedback.scss";
+@import "components/licenses/licenses.scss";
+@import "components/hero/hero.scss";
+@import "components/invest/invest.scss";
+@import "components/advantages/advantages.scss";

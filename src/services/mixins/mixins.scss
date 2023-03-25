@@ -1,0 +1,24 @@
+// Медиа-запросы
+// @include lg {
+//   background: red;
+// }
+
+@mixin xs {
+  @media (min-width: 374.98px) { @content; }
+}
+
+@mixin sm {
+  @media (min-width: 767.98px) { @content; }
+}
+
+@mixin md {
+  @media (min-width: 991.98px) { @content; }
+}
+
+@mixin lg {
+  @media (min-width: 1279.98px) { @content; }
+}
+
+@mixin xl {
+  @media (min-width: 1839.98px) { @content; }
+}

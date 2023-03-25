@@ -1,0 +1,242 @@
+.invest-card {
+  position: relative;
+  min-height: 215px;
+  padding: 25px 20px;
+  background-color: #fff;
+  border-radius: 6px;
+
+  &__body {
+    position: relative;
+    z-index: 5;
+  }
+
+  &__title {
+    width: 199px;
+    margin-bottom: 6px;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 26px;
+
+    @include sm {
+      width: 262px;
+      margin-bottom: 11px;
+      font-size: 20px;
+      line-height: 28px;
+    }
+
+    @include lg {
+      margin-bottom: 19px;
+    }
+  }
+
+  &__text {
+    width: 199px;
+    font-size: 14px;
+    line-height: 22px;
+
+    @include sm {
+      width: 369px;
+      font-size: 16px;
+      line-height: 26px;
+    }
+
+    @include lg {
+      width: 282px;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    flex-direction: column;
+
+    @include sm {
+      flex-direction: row;
+    }
+
+    @include lg {
+      padding-left: 3px;
+    }
+  }
+
+  &__button {
+    &-lk {
+      margin-bottom: 14px;
+
+      .round-icon {
+        margin-right: 13px;
+        margin-left: 0;
+      }
+    }
+
+    @include sm {
+      &-lk {
+        justify-content: flex-start;
+        margin-right: 21px;
+
+        .button {
+          &__round-icon {
+            margin-right: 9px;
+          }
+
+          &__text {
+            margin-top: 4px;
+          }
+        }
+      }
+    }
+  }
+
+  &__index {
+    position: absolute;
+    right: 22px;
+    bottom: 22px;
+    z-index: 3;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    color: white;
+    font-size: 15px;
+    background-color: #0e1126;
+    border-radius: 50%;
+
+    @include sm {
+      right: 24px;
+      bottom: 21px;
+      width: 75px;
+      height: 75px;
+      font-size: 25px;
+    }
+
+    @include lg {
+      right: 30px;
+      bottom: 25px;
+    }
+  }
+
+  &__decor {
+    position: absolute;
+
+    &--1 {
+      top: 20px;
+      right: 20px;
+      width: 94px;
+      height: 88px;
+    }
+
+    &--2 {
+      top: 14px;
+      right: 7px;
+      width: 119px;
+      height: 88px;
+    }
+
+    &--3 {
+      right: 55px;
+      bottom: 27px;
+      width: 241px;
+      height: 157px;
+    }
+
+    @include sm {
+      &--1 {
+        top: 31px;
+        right: 44px;
+        width: 182px;
+        height: 172px;
+      }
+
+      &--2 {
+        top: 30px;
+        right: 40px;
+        width: 233px;
+        height: 172px;
+      }
+
+      &--3 {
+        top: 40px;
+        right: 20px;
+        bottom: auto;
+        width: 289px;
+        height: 190px;
+      }
+    }
+
+    @include lg {
+      &--1 {
+        top: 50px;
+        right: 70px;
+        width: 137px;
+        height: 130px;
+      }
+
+      &--2 {
+        top: 50px;
+        right: 63px;
+        width: 167px;
+        height: 123px;
+      }
+
+      &--3 {
+        top: 55px;
+        right: 64px;
+      }
+    }
+  }
+
+  &--btns {
+    padding-bottom: 199px;
+
+    .invest-card {
+      &__title {
+        width: 100%;
+      }
+
+      &__text {
+        width: 100%;
+        margin-bottom: 31px;
+      }
+    }
+  }
+
+  @include sm {
+    min-height: 255px;
+    padding: 42px 29px;
+
+    &--btns {
+      padding: 56px 29px 44px;
+
+      .invest-card {
+        &__title {
+          width: 353px;
+        }
+
+        &__text {
+          width: 353px;
+          margin-bottom: 28px;
+        }
+      }
+    }
+  }
+
+  @include lg {
+    min-height: 285px;
+    padding: 53px 49px;
+
+    &--btns {
+      padding: 74px 49px 37px;
+
+      .invest-card {
+        &__title {
+          margin-bottom: 10px;
+        }
+
+        &__text {
+          width: 100%;
+          margin-bottom: 22px;
+        }
+      }
+    }
+  }
+}

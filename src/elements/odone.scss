@@ -1,0 +1,19 @@
+.odone {
+  display: inline-flex;
+  transition: all $duration ease;
+
+  &__icon {
+    width: 68px;
+    height: 31.4px;
+    transition: all $duration ease;
+    fill: black;
+  }
+
+  &:hover {
+    .odone {
+      &__icon {
+        fill: $secondary;
+      }
+    }
+  }
+}

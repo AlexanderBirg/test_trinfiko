@@ -1,0 +1,88 @@
+.hero {
+  position: relative;
+  padding-top: 29px;
+  padding-bottom: 32px;
+  background-color: $dark;
+
+  &__container {
+    position: relative;
+    z-index: 5;
+  }
+
+  &__title {
+    margin-bottom: 10px;
+    color: white;
+    font-size: 35px;
+    line-height: 39px;
+    text-transform: uppercase;
+
+    @include sm {
+      margin-bottom: 9px;
+      font-size: 56px;
+      line-height: 72px;
+    }
+
+    @include lg {
+      margin-bottom: 6px;
+    }
+  }
+
+  &__text {
+    margin-bottom: 22px;
+    color: white;
+    font-size: 14px;
+    line-height: 22px;
+
+    @include sm {
+      margin-bottom: 38px;
+      font-size: 18px;
+      line-height: 28px;
+    }
+
+    @include lg {
+      margin-bottom: 51px;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    flex-direction: column;
+
+    @include sm {
+      flex-direction: row;
+    }
+
+    @include lg {
+      padding-left: 3px;
+    }
+  }
+
+  &__button {
+    &-lk {
+      margin-bottom: 14px;
+    }
+
+    @include sm {
+      &-lk {
+        margin-right: 29px;
+        margin-bottom: 0;
+      }
+    }
+
+    @include lg {
+      &-lk {
+        margin-right: 31px;
+      }
+    }
+  }
+
+  @include sm {
+    padding-top: 62px;
+    padding-bottom: 81px;
+  }
+
+  @include lg {
+    padding-top: 118px;
+    padding-bottom: 144px;
+  }
+}

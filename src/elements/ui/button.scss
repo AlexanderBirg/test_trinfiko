@@ -1,0 +1,115 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 200px;
+  height: 50px;
+  padding: 10px 15px;
+  color: white;
+  text-decoration: none;
+  border: 1px solid white;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all $duration ease;
+
+  &__round-icon {
+    margin-right: 9px;
+    margin-left: -20px;
+  }
+
+  &__text {
+    font-size: 12px;
+    line-height: 1;
+
+    @include sm {
+      font-size: 14px;
+    }
+  }
+
+  &:hover {
+    color: $primary;
+    background-color: #fff;
+
+    .button {
+      &__round-icon {
+        .round-icon {
+          &__wrapper {
+            background-color: white;
+          }
+
+          &__icon {
+            fill: $secondary;
+          }
+        }
+      }
+    }
+  }
+
+  &--round-icon {
+    min-width: 200px;
+  }
+
+  &--fill {
+    background-color: $primary;
+    border: none;
+
+    &:hover {
+      color: white;
+      background-color: $secondary;
+    }
+  }
+
+  &--white {
+    color: black;
+    background-color: #fff;
+    border: 1px solid $primary;
+
+    &:hover {
+      color: white;
+      background-color: $secondary;
+      border-color: $secondary;
+    }
+  }
+
+  &--long {
+    min-width: 215px;
+  }
+
+  &--short {
+    min-width: 165px;
+  }
+
+  &--arrow {
+    min-width: 165px;
+    height: 45px;
+    padding-right: 25px;
+    padding-left: 25px;
+
+    .button {
+      &__arrow {
+        width: 17px;
+        height: 12px;
+        margin-left: auto;
+        fill: white;
+      }
+    }
+  }
+
+  &--upper {
+    text-transform: uppercase;
+
+    .button {
+      &__text {
+        margin-top: 4px;
+      }
+    }
+  }
+
+  &--big-text {
+    .button {
+      &__text {
+        font-size: 14px;
+      }
+    }
+  }
+}

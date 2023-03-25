@@ -1,0 +1,18 @@
+{
+  "extends": "airbnb-base",
+  "ignorePatterns": ["hystmodal.js"],
+  "rules": {
+    "no-new": "off",
+    "import/extensions": "off",
+    "arrow-body-style": ["error", "always"],
+    "import/no-extraneous-dependencies": ["error", {"devDependencies": true}],
+    "no-param-reassign": "off",
+    "no-plusplus": "off",
+    "max-len": ["error", { "code": 160 }],
+    "no-unused-vars": ["error", { "varsIgnorePattern": "[iI]gnored" }]
+  },
+  "env": {
+    "browser": true,
+    "node": true
+  }
+}

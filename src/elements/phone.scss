@@ -1,0 +1,12 @@
+.phone {
+  color: black;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 16px;
+  text-decoration: none;
+  transition: all $duration ease;
+
+  &:hover {
+    color: $primary;
+  }
+}

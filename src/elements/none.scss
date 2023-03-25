@@ -1,0 +1,39 @@
+.none {
+  display: none;
+
+  &-ss {
+    @media (max-width: 374.98px) {
+      display: none;
+    }
+  }
+
+  &-sm {
+    @media (min-width: 374.99px) and (max-width: 767.98px) {
+      display: none;
+    }
+  }
+
+  &-md {
+    @media (min-width: 767.99px) and (max-width: 1297.98px) {
+      display: none;
+    }
+  }
+
+  &-lg {
+    @media (min-width: 1279.99px) and (max-width: 1839.98px) {
+      display: none;
+    }
+  }
+
+  &-xl {
+    @media (min-width: 1839.99px) and (max-width: 1919.98px) {
+      display: none;
+    }
+  }
+
+  &-xxl {
+    @media (min-width: 1919.99px) {
+      display: none;
+    }
+  }
+}

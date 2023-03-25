@@ -1,0 +1,107 @@
+.feedback {
+  position: relative;
+  padding-top: 31px;
+  padding-bottom: 28px;
+  background-color: $primary;
+
+  &__body {
+    position: relative;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 42px 20px 48px;
+    background-color: #fff;
+    border-radius: 6px;
+
+    @include sm {
+      padding: 89px 43px 108px;
+    }
+
+    @include lg {
+      padding: 95px 90px 103px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 10px;
+
+    @include sm {
+      margin-bottom: 13px;
+    }
+  }
+
+  &__text {
+    margin-bottom: 17px;
+    font-size: 14px;
+    line-height: 22px;
+
+    @include sm {
+      margin-bottom: 28px;
+      font-size: 18px;
+      line-height: 28px;
+    }
+  }
+
+  &__phone {
+    display: inline-block;
+    margin-bottom: 30px;
+    color: black;
+    font-size: 24px;
+
+    @include sm {
+      margin-bottom: 27px;
+      font-size: 35px;
+    }
+
+    @include lg {
+      margin-bottom: 26px;
+    }
+  }
+
+  &__button {
+    min-width: 165px;
+    height: 45px;
+
+    .button {
+      &__arrow {
+        margin-left: 15px;
+      }
+    }
+
+    @include sm {
+      min-width: 200px;
+      height: 50px;
+      padding-right: 23px;
+      padding-left: 34px;
+
+      .button {
+        &__arrow {
+          margin-left: auto;
+        }
+      }
+    }
+  }
+
+  &__img {
+    position: absolute;
+    right: 0;
+    bottom: 21px;
+    width: 144px;
+
+    @include sm {
+      right: 0;
+      bottom: 0;
+      width: 365px;
+    }
+
+    @include lg {
+      width: 620px;
+    }
+  }
+
+  @include sm {
+    padding-top: 75px;
+    padding-bottom: 75px;
+  }
+}

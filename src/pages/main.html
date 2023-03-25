@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    {% set pageTitle = 'ТРИНФИКО – независимый брокер' %}
+    {% include "./components/head/head.html" %}
+  </head>
+
+  <body class="page">
+
+    {% include "./components/preloader/preloader.html" %}
+
+    {# begin header #}
+    {% include "./components/header/header.html" %}
+    {% include "./components/mobile-menu/mobile-menu.html" %}
+    {# end header #}
+
+    <div class="page__content">
+
+      {% include "./components/hero/hero.html" %}
+
+      {% include "./components/invest/invest.html" %}
+
+      {% include "./components/advantages/advantages.html" %}
+
+      {% include "./components/licenses/licenses.html" %}
+
+      {% include "./components/feedback/feedback.html" %}
+
+    </div>
+
+    {# begin footer #}
+    {% include "./components/footer/footer.html" %}
+    {# end footer #}
+
+    {# begin modals #}
+    {% include "./components/hystmodal-question/hystmodal-question.html" %}
+    {% include "./components/hystmodal-message/hystmodal-message.html" %}
+    {# end modals #}
+  </body>
+</html>

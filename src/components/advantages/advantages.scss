@@ -1,0 +1,140 @@
+.advantages {
+  position: relative;
+  padding-top: 36px;
+  padding-bottom: 37px;
+  background-color: $dark;
+
+  &__wrapper {
+    position: relative;
+    z-index: 4;
+  }
+
+  @include sm {
+    padding-top: 70px;
+    padding-bottom: 81px;
+  }
+
+  @include lg {
+    padding-top: 90px;
+    padding-bottom: 96px;
+  }
+
+  &__title {
+    margin-bottom: 25px;
+    color: white;
+
+    @include sm {
+      margin-bottom: 42px;
+      font-size: 44px;
+    }
+
+    @include lg {
+      margin-bottom: 61px;
+    }
+  }
+
+  &__body {
+    padding: 46px 20px 55px;
+    background-color: #fff;
+    border-radius: 6px;
+
+    @include sm {
+      padding: 52px 50px 11px;
+    }
+
+    @include lg {
+      padding: 80px 70px 71px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+
+    @include sm {
+      flex-flow: row wrap;
+    }
+
+    @include lg {
+      flex-flow: row nowrap;
+    }
+  }
+
+  &__item {
+    margin-bottom: 23px;
+
+    @include sm {
+      flex: 1 1 295px;
+      margin-right: 30px;
+      margin-bottom: 38px;
+
+      &:nth-child(2n) {
+        margin-right: 0;
+      }
+    }
+
+    @include lg {
+      margin-right: 0;
+      margin-bottom: 0;
+
+      &:nth-child(1) {
+        flex: 0 1 246px;
+        margin-right: 0;
+        padding-right: 70px;
+      }
+
+      &:nth-child(2) {
+        flex: 0 1 298px;
+        margin-right: 0;
+        padding-right: 70px;
+      }
+
+      &:nth-child(3) {
+        flex: 0 1 327px;
+        margin-right: 0;
+        padding-right: 70px;
+      }
+
+      &:nth-child(4) {
+        flex: 0 1 229px;
+        margin-right: 0;
+        padding-right: 20px;
+      }
+    }
+  }
+
+  &__item-title {
+    margin-bottom: 6px;
+    color: $primary;
+    font-weight: bold;
+    font-size: 32px;
+
+    &--naufor-icon {
+      margin-top: 26px;
+      margin-bottom: 17px;
+    }
+
+    @include sm {
+      margin-bottom: 25px;
+
+      &--naufor-icon {
+        margin-top: 4px;
+        margin-bottom: 17px;
+      }
+    }
+
+    @include lg {
+      margin-bottom: 26px;
+
+      &--naufor-icon {
+        margin-top: 0;
+        margin-bottom: 16px;
+      }
+    }
+  }
+
+  &__item-text {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}

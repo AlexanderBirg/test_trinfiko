@@ -1,0 +1,19 @@
+<div class="bread-crumbs">
+  <div class="wrapper">
+    <ul class="bread-crumbs__list">
+      <li class="bread-crumbs__item">
+        <a class="bread-crumbs__link" href="/">
+          <svg class="bread-crumbs__icon ">
+            <use xlink:href="images/sprite.svg#home"></use>
+          </svg>
+          <span>Главная</span>
+        </a>
+      </li>
+      {% for item in breadCrumbsList %}
+        <li class="bread-crumbs__item">
+          <a class="bread-crumbs__link" href="{{ item.link }}"><span>{{ item.text }}</span></a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>

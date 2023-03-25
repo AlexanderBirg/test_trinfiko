@@ -1,0 +1,57 @@
+.textarea-block {
+  position: relative;
+
+  &__label {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    color: rgba($color: #000, $alpha: 0.5);
+    font-size: 14px;
+    line-height: 1.2;
+    transition: all $duration ease;
+    pointer-events: none;
+
+    @include sm {
+      top: 13px;
+      left: 18px;
+      font-size: 18px;
+    }
+  }
+
+  &__textarea {
+    width: 100%;
+    height: 140px;
+    padding: 21px 16px 11px;
+    color: #000;
+    font-size: 18px;
+    border: 1px solid #d5d5d5;
+    border-radius: 4px;
+    transition: all $duration ease;
+    resize: none;
+
+    &:focus {
+      background-color: #f5f5f5;
+      outline: none;
+    }
+
+    @include sm {
+      height: 165px;
+      padding: 23px 18px 13px;
+      font-size: 18px;
+    }
+  }
+
+  &--focus {
+    .textarea-block {
+      &__label {
+        top: 6px;
+        font-size: 10px;
+
+        @include sm {
+          top: 7px;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+.link {
+  color: $primary;
+  text-decoration: underline;
+  cursor: pointer;
+  transition: all $duration ease;
+
+  &:hover {
+    color: $secondary;
+    text-decoration: underline;
+  }
+}

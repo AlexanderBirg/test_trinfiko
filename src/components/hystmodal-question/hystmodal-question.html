@@ -1,0 +1,91 @@
+<div class="hystmodal hystmodal-full" id="question-modal" aria-hidden="true">
+  <div class="hystmodal__wrap">
+      <div class="hystmodal__window" role="dialog" aria-modal="true">
+          <button data-hystclose class="hystmodal__close">
+            <span>Закрыть</span>
+            <svg class="hystmodal__close-icon inline-svg">
+              <use xlink:href="images/sprite.svg#close"></use>
+            </svg>
+          </button>
+          <h3 class="hystmodal-full__title title title--tertiary">
+            Задать вопрос
+          </h3>
+          <form class="form" action="http://localhost:3000/upload" method="post" enctype="multipart/form-data">
+
+            <div class="form__item form__item--name input-block input-block--name">
+              <div class="input-block__label">Ваше имя и фамилия</div>
+              <input class="input-block__input" type="text">
+              <div class="input-block__description">
+                <span class="input-block__valid-description">Укажите, если хотите чтобы консультант обратился персонально</span>
+                <span class="input-block__invalid-description">Введите Ваше имя и фамилию</span>
+              </div>
+          
+              <svg class="input-block__invalid-icon">
+                <use xlink:href="images/sprite.svg#close"></use>
+              </svg>
+              <svg class="input-block__valid-icon">
+                <use xlink:href="images/sprite.svg#checked"></use>
+              </svg>
+            </div>
+          
+          
+            <div class="form__item form__item--column">
+              <div class="input-block input-block--tel">
+                <div class="input-block__label">Телефон</div>
+                <input class="input-block__input input-phone" type="text">
+                <div class="input-block__description">
+                  <span class="input-block__valid-description">Вы должны являться абонентом (владельцем) указанного номера</span>
+                  <span class="input-block__invalid-description">Введите номер телефона</span>
+                </div>
+            
+                <svg class="input-block__invalid-icon">
+                  <use xlink:href="images/sprite.svg#close"></use>
+                </svg>
+                <svg class="input-block__valid-icon">
+                  <use xlink:href="images/sprite.svg#checked"></use>
+                </svg>
+              </div>
+            
+              <div class="input-block input-block--email">
+                <div class="input-block__label">E-mail</div>
+                <input class="input-block__input" type="text">
+                <div class="input-block__description">
+                  <span class="input-block__valid-description">На указанный адрес электронной почты будет направлена письменная консультация</span>
+                  <span class="input-block__invalid-description">Введите адрес электронной почты</span>
+                </div>
+            
+                <svg class="input-block__invalid-icon">
+                  <use xlink:href="images/sprite.svg#close"></use>
+                </svg>
+                <svg class="input-block__valid-icon">
+                  <use xlink:href="images/sprite.svg#checked"></use>
+                </svg>
+              </div>
+            </div>
+          
+            <!-- TEXTAREA (опционально) -->
+            <div class="form__item form__item--textarea textarea-block textarea-block--textarea">
+              <div class="textarea-block__label">Текст вопроса</div>
+              <textarea class="textarea-block__textarea"></textarea>
+            </div>
+          
+            <div class="form__submit-block">
+              <div class="form__captcha">
+                <div id="question-modal-captcha-container" class="smart-captcha" data-sitekey="L9DS22uX7HDpVYbjv166cg5TPi215NlI6vhIzXHl">
+                  <input type="hidden" name="smart-token" value="<токен>">
+                </div>
+              </div>
+            
+              <button type="submit" class="form__submit button button--fill button--long">
+                <span>Отправить</span>
+              </button>
+            </div>
+          
+            <div class="form__privacy">Ввод номера телефона подтверждает
+              <a class="form__link" href="">информированное согласие на хранение и обработку персональных данных</a>
+            </div>
+          
+          </form>
+      </div>
+  </div>
+</div>

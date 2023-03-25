@@ -1,0 +1,65 @@
+<header class="header">
+  <div class="header__gap-container" data-hystfixed>
+    <div class="wrapper header__wrapper">
+      <div class="header__left">
+        <a href="/" class="main-logo header__main-logo">
+          <svg class="main-logo__icon">
+            <use xlink:href="images/sprite.svg#mainLogo"></use>
+          </svg>
+        </a>
+      </div>
+      <div class="header__center">
+        <nav class="header__nav gorizontal-nav">
+          <ul class="gorizontal-nav__list">
+            <li class="gorizontal-nav__item {{ 'active' if activeMenuItem == 'about' else '' }}"><a href="/#advantages" class="gorizontal-nav__link" data-my-anchor="#advantages">О компании</a></li>
+            <li class="gorizontal-nav__item {{ 'active' if activeMenuItem == 'quik' else '' }}"><a href="/quik.html" class="gorizontal-nav__link">QUIK</a></li>
+            <li class="gorizontal-nav__item {{ 'active' if activeMenuItem == 'tariffs' else '' }}"><a href="/tariffs.html" class="gorizontal-nav__link">Тарифы</a></li>
+            <li class="gorizontal-nav__item {{ 'active' if activeMenuItem == 'faq' else '' }}"><a href="/faq.html" class="gorizontal-nav__link">Вопросы и ответы</a></li>
+            <li class="gorizontal-nav__item {{ 'active' if activeMenuItem == 'licenses' else '' }}"><a href="/#licenses" class="gorizontal-nav__link" data-my-anchor="#licenses">Лицензии</a></li>
+            <li class="gorizontal-nav__item {{ 'active' if activeMenuItem == 'career' else '' }}"><a href="/career.html" class="gorizontal-nav__link">Карьера</a></li>
+            <li class="gorizontal-nav__item {{ 'active' if activeMenuItem == 'contacts' else '' }}"><a href="/contacts.html" class="gorizontal-nav__link">Контакты</a></li>
+          </ul>
+        </nav>
+        <a href="tel:+74957252500" class="header__phone phone">
+          <span class="phone__text">+7 495 725-25-00</span>
+        </a>
+      </div>
+      <div class="header__right">
+        <ul class="header__round-icon-list">
+          <li class="header__round-icon-item">
+            <div class="round-icon round-icon--small">
+              <div class="round-icon__wrapper">
+                <svg class="inline-svg round-icon__icon round-icon__icon--tme">
+                  <use xlink:href="images/sprite.svg#tme"></use>
+                </svg>
+              </div>
+            </div>
+          </li>
+          <li class="header__round-icon-item">
+            <div class="round-icon round-icon--small">
+              <div class="round-icon__wrapper">
+                <svg class="inline-svg round-icon__icon round-icon__icon--mail">
+                  <use xlink:href="images/sprite.svg#mail"></use>
+                </svg>
+              </div>
+            </div>
+          </li>
+          <li class="header__round-icon-item">
+            <div class="round-icon round-icon--dark round-icon--small">
+              <div class="round-icon__wrapper">
+                <svg class="inline-svg round-icon__icon round-icon__icon--user">
+                  <use xlink:href="images/sprite.svg#user"></use>
+                </svg>
+              </div>
+              <span class="round-icon__text none-ss none-sm none-lg">
+                Личный <br class="none-lg none-xl none-xxl">кабинет
+              </span>
+            </div>
+          </li>
+        </ul>
+  
+        <button id="burger" class="header__burger"><span></span></button>
+      </div>
+    </div>
+  </div>
+</header>

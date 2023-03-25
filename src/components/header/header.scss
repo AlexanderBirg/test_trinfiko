@@ -1,0 +1,220 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 90;
+  width: 100%;
+  padding: 13px 0 17px;
+  background-color: #fff;
+  transition: all $duration ease;
+
+  @include sm {
+    padding: 26px 0;
+  }
+
+  @include xl {
+    padding-top: 37px;
+    padding-bottom: 37px;
+  }
+
+  &__wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+
+  &__left {
+    display: flex;
+    align-items: center;
+
+    @include lg {
+      margin-right: 19px;
+    }
+
+    @include xl {
+      position: absolute;
+      left: -43px;
+      margin-right: 0;
+      transform: translateX(-100%);
+    }
+  }
+
+  &__center {
+    display: none;
+    flex-grow: 1;
+    align-items: center;
+    margin-right: 35px;
+
+    @include sm {
+      display: flex;
+      margin-right: 35px;
+    }
+
+    @include xl {
+      margin-right: 0;
+      padding-right: 49px;
+    }
+  }
+
+  &__nav {
+    display: none;
+
+    @include lg {
+      display: block;
+    }
+  }
+
+  &__phone {
+    display: none;
+    margin-left: auto;
+
+    @include sm {
+      display: block;
+    }
+  }
+
+  &__right {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+
+    @include lg {
+      margin-right: -20px;
+    }
+
+    @include xl {
+      position: absolute;
+      right: 18px;
+      margin-right: 0;
+      transform: translateX(100%);
+    }
+  }
+
+  &__main-logo {
+    margin-top: 3px;
+    margin-right: 10px;
+
+    @include sm {
+      margin-top: 0;
+    }
+
+    @include xl {
+      margin-right: 0;
+    }
+  }
+
+  &__round-icon-list {
+    display: flex;
+    align-items: center;
+  }
+
+  &__round-icon-item {
+    margin-right: 15px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    @include sm {
+      margin-right: 20px;
+
+      .round-icon {
+        &__wrapper {
+          width: 35px;
+          height: 35px;
+        }
+
+        &__icon {
+          &--user {
+            height: 18px;
+          }
+
+          &--mail {
+            height: 12px;
+          }
+
+          &--tme {
+            height: 11px;
+          }
+        }
+      }
+    }
+  }
+
+  &__burger {
+    position: relative;
+    width: 30px;
+    height: 18px;
+    margin-left: 10px;
+
+    &::before,
+    &::after {
+      position: absolute;
+      left: 0;
+      display: block;
+      width: 100%;
+      height: 2px;
+      background-color: #000;
+      transition: all $duration ease;
+      content: "";
+    }
+
+    &::before {
+      top: 0;
+    }
+
+    &::after {
+      bottom: 0;
+    }
+
+    span {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: #000;
+      transform: translateY(-50%);
+      transition: all $duration ease;
+    }
+
+    &--active {
+      &::before {
+        top: 50%;
+        transform: rotate(45deg);
+      }
+
+      &::after {
+        top: 50%;
+        transform: rotate(-45deg);
+      }
+
+      span {
+        opacity: 0;
+      }
+    }
+
+    @include xs {
+      margin-left: 22px;
+    }
+
+    @include sm {
+      width: 35px;
+      margin-left: 34px;
+    }
+
+    @include lg {
+      display: none;
+    }
+  }
+
+  &--scrolling {
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    @include sm {
+      padding-top: 16px;
+      padding-bottom: 16px;
+    }
+  }
+}

@@ -1,0 +1,141 @@
+.round-icon {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+
+  &__wrapper {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    background-color: $primary;
+    border-radius: 50%;
+    transition: all $duration ease;
+  }
+
+  &__icon {
+    width: 18px;
+    transition: all $duration ease;
+    fill: white;
+
+    &--user {
+      height: 18px;
+    }
+
+    &--mail {
+      height: 12px;
+    }
+
+    &--tme {
+      height: 11px;
+    }
+  }
+
+  &__text {
+    margin-left: 10px;
+    font-size: 14px;
+    line-height: 16px;
+    transition: all $duration ease;
+  }
+
+  &--large {
+    .round-icon {
+      &__wrapper {
+        width: 40px;
+        height: 40px;
+      }
+
+      &__icon {
+        &--mail {
+          height: 13px;
+        }
+
+        &--call {
+          height: 20px;
+        }
+      }
+    }
+  }
+
+  &--big {
+    .round-icon {
+      &__wrapper {
+        width: 37px;
+        height: 37px;
+      }
+    }
+  }
+
+  &--small {
+    .round-icon {
+      &__wrapper {
+        width: 30px;
+        height: 30px;
+      }
+
+      &__icon {
+        &--user {
+          height: 15px;
+        }
+
+        &--mail {
+          height: 10px;
+        }
+
+        &--tme {
+          height: 10px;
+        }
+      }
+    }
+  }
+
+  &:hover {
+    .round-icon {
+      &__wrapper {
+        background-color: $secondary;
+      }
+
+      &__text {
+        color: $secondary;
+      }
+    }
+  }
+
+  &--default {
+    pointer-events: none;
+  }
+
+  &--dark {
+    .round-icon {
+      &__wrapper {
+        background-color: $dark;
+      }
+    }
+  }
+
+  &--transparent {
+    .round-icon {
+      &__wrapper {
+        background-color: transparent;
+        border: 1px solid $primary;
+      }
+
+      &__icon {
+        fill: $primary;
+      }
+    }
+
+    &:hover {
+      .round-icon {
+        &__wrapper {
+          background-color: $primary;
+        }
+
+        &__icon {
+          fill: white;
+        }
+      }
+    }
+  }
+}

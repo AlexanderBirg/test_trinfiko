@@ -1,0 +1,33 @@
+.title {
+  font-weight: normal;
+
+  &--primary {
+    font-size: 24px;
+    line-height: 32px;
+
+    @include sm {
+      font-size: 44px;
+      line-height: 66px;
+    }
+  }
+
+  &--secondary {
+    font-size: 22px;
+    line-height: 30px;
+
+    @include sm {
+      font-size: 36px;
+      line-height: 44px;
+    }
+  }
+
+  &--tertiary {
+    font-size: 20px;
+    line-height: 28px;
+
+    @include sm {
+      font-size: 32px;
+      line-height: 40px;
+    }
+  }
+}
