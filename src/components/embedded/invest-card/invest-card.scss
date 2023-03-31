@@ -5,6 +5,16 @@
   background-color: #fff;
   border-radius: 6px;
 
+  @include sm {
+    min-height: 255px;
+    padding: 42px 29px;
+  }
+
+  @include lg {
+    min-height: 285px;
+    padding: 53px 49px;
+  }
+
   &__body {
     position: relative;
     z-index: 5;
@@ -63,23 +73,25 @@
     &-lk {
       margin-bottom: 14px;
 
+      @include sm {
+        justify-content: flex-start;
+        margin-right: 21px;
+      }
+
       .round-icon {
         margin-right: 13px;
         margin-left: 0;
       }
-    }
 
-    @include sm {
-      &-lk {
-        justify-content: flex-start;
-        margin-right: 21px;
-
-        .button {
-          &__round-icon {
+      .button {
+        &__round-icon {
+          @include sm {
             margin-right: 9px;
           }
+        }
 
-          &__text {
+        &__text {
+          @include sm {
             margin-top: 4px;
           }
         }
@@ -124,6 +136,20 @@
       right: 20px;
       width: 94px;
       height: 88px;
+
+      @include sm {
+        top: 31px;
+        right: 44px;
+        width: 182px;
+        height: 172px;
+      }
+
+      @include lg {
+        top: 50px;
+        right: 70px;
+        width: 137px;
+        height: 130px;
+      }
     }
 
     &--2 {
@@ -131,6 +157,20 @@
       right: 7px;
       width: 119px;
       height: 88px;
+
+      @include sm {
+        top: 30px;
+        right: 40px;
+        width: 233px;
+        height: 172px;
+      }
+
+      @include lg {
+        top: 50px;
+        right: 63px;
+        width: 167px;
+        height: 123px;
+      }
     }
 
     &--3 {
@@ -138,48 +178,16 @@
       bottom: 27px;
       width: 241px;
       height: 157px;
-    }
 
-    @include sm {
-      &--1 {
-        top: 31px;
-        right: 44px;
-        width: 182px;
-        height: 172px;
-      }
-
-      &--2 {
-        top: 30px;
-        right: 40px;
-        width: 233px;
-        height: 172px;
-      }
-
-      &--3 {
+      @include sm {
         top: 40px;
         right: 20px;
         bottom: auto;
         width: 289px;
         height: 190px;
       }
-    }
 
-    @include lg {
-      &--1 {
-        top: 50px;
-        right: 70px;
-        width: 137px;
-        height: 130px;
-      }
-
-      &--2 {
-        top: 50px;
-        right: 63px;
-        width: 167px;
-        height: 123px;
-      }
-
-      &--3 {
+      @include lg {
         top: 55px;
         right: 64px;
       }
@@ -189,51 +197,37 @@
   &--btns {
     padding-bottom: 199px;
 
+    @include sm {
+      padding: 56px 29px 44px;
+    }
+
+    @include lg {
+      padding: 74px 49px 37px;
+    }
+
     .invest-card {
       &__title {
         width: 100%;
+
+        @include sm {
+          width: 353px;
+        }
+
+        @include lg {
+          margin-bottom: 10px;
+        }
       }
 
       &__text {
         width: 100%;
         margin-bottom: 31px;
-      }
-    }
-  }
 
-  @include sm {
-    min-height: 255px;
-    padding: 42px 29px;
-
-    &--btns {
-      padding: 56px 29px 44px;
-
-      .invest-card {
-        &__title {
-          width: 353px;
-        }
-
-        &__text {
+        @include sm {
           width: 353px;
           margin-bottom: 28px;
         }
-      }
-    }
-  }
 
-  @include lg {
-    min-height: 285px;
-    padding: 53px 49px;
-
-    &--btns {
-      padding: 74px 49px 37px;
-
-      .invest-card {
-        &__title {
-          margin-bottom: 10px;
-        }
-
-        &__text {
+        @include lg {
           width: 100%;
           margin-bottom: 22px;
         }

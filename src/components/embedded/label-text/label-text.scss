@@ -21,6 +21,10 @@
     font-size: 16px;
     transition: all $duration ease;
 
+    @include sm {
+      font-size: 23px;
+    }
+
     &:hover {
       color: $secondary;
     }
@@ -28,12 +32,8 @@
     &--black {
       color: black;
       font-size: 18px;
-    }
 
-    @include sm {
-      font-size: 23px;
-
-      &--black {
+      @include sm {
         font-size: 32px;
       }
     }

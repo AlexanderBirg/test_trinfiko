@@ -168,6 +168,7 @@ if (uploadBlockList) {
     resetButton.onclick = () => {
       input.value = '';
       uploadBlock.querySelector('.upload-block__text').innerText = 'Прикрепить файл';
+      uploadBlock.classList.remove('upload-block--focus');
 
       validateUploadBlock(uploadBlock);
     };

@@ -29,15 +29,15 @@
     transition: all $duration ease;
     resize: none;
 
-    &:focus {
-      background-color: #f5f5f5;
-      outline: none;
-    }
-
     @include sm {
       height: 165px;
       padding: 23px 18px 13px;
       font-size: 18px;
+    }
+
+    &:focus {
+      background-color: #f5f5f5;
+      outline: none;
     }
   }
 

@@ -10,6 +10,10 @@
   opacity: 0;
   transition: $duration;
 
+  @include sm {
+    padding-top: 90px;
+  }
+
   &--active {
     visibility: visible;
     opacity: 1;
@@ -86,13 +90,13 @@
     text-decoration: underline;
     transition: all $duration ease;
 
+    @include sm {
+      flex: 0 0 300px;
+    }
+
     &:hover {
       color: $primary;
       text-decoration: underline;
-    }
-
-    @include sm {
-      flex: 0 0 300px;
     }
   }
 
@@ -124,18 +128,16 @@
 
     &--left {
       flex: 0 1 190px;
+
+      @include sm {
+        flex: 0 1 343px;
+      }
     }
 
     &--right {
       flex: 0 0 125px;
-    }
 
-    @include sm {
-      &--left {
-        flex: 0 1 343px;
-      }
-
-      &--right {
+      @include sm {
         flex: 0 0 220px;
       }
     }
@@ -144,12 +146,12 @@
   &__nav-item {
     margin-bottom: 34px;
 
-    &:last-child {
-      margin-bottom: 0;
-    }
-
     @include sm {
       margin-bottom: 68px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
     }
   }
 
@@ -171,51 +173,49 @@
     padding-bottom: 82px;
     border-top: 1px solid #d5d5d5;
 
+    @include sm {
+      flex-direction: row;
+      padding-top: 44px;
+      padding-bottom: 159px;
+    }
+
     &-part-1 {
       display: flex;
       flex-direction: row;
       margin-bottom: 26px;
+
+      @include sm {
+        flex: 0 0 343px;
+        flex-direction: column;
+        margin-bottom: 0;
+      }
     }
 
     &-part-2 {
       display: flex;
       flex-direction: row;
+
+      @include sm {
+        flex: 0 0 300px;
+        flex-direction: column;
+        padding-top: 5px;
+      }
     }
 
     &-item {
       &--tel {
         flex: 0 1 190px;
+
+        @include sm {
+          flex: 0 0 auto;
+          margin-bottom: 45px;
+        }
       }
 
       &--email {
         flex: 0 1 125px;
-      }
-    }
 
-    @include sm {
-      flex-direction: row;
-      padding-top: 44px;
-      padding-bottom: 159px;
-
-      &-part-1 {
-        flex: 0 0 343px;
-        flex-direction: column;
-        margin-bottom: 0;
-      }
-
-      &-part-2 {
-        flex: 0 0 300px;
-        flex-direction: column;
-        padding-top: 5px;
-      }
-
-      &-item {
-        &--tel {
-          flex: 0 0 auto;
-          margin-bottom: 45px;
-        }
-
-        &--email {
+        @include sm {
           flex: 0 0 auto;
         }
       }
@@ -238,31 +238,29 @@
     margin-left: auto;
     padding-top: 3px;
 
+    @include sm {
+      display: flex;
+      margin-left: 0;
+      padding-top: 0;
+    }
+
     &-text {
       display: none;
       font-weight: 400;
       font-size: 12px;
       line-height: 16px;
       text-transform: uppercase;
-    }
 
-    @include sm {
-      display: flex;
-      margin-left: 0;
-      padding-top: 0;
-
-      &-text {
+      @include sm {
         display: block;
         margin-right: 12px;
       }
+    }
 
-      &-list {
+    &-list {
+      @include sm {
         margin-top: -5px;
       }
     }
-  }
-
-  @include sm {
-    padding-top: 90px;
   }
 }

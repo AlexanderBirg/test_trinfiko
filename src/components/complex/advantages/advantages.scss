@@ -4,11 +4,6 @@
   padding-bottom: 37px;
   background-color: $dark;
 
-  &__wrapper {
-    position: relative;
-    z-index: 4;
-  }
-
   @include sm {
     padding-top: 70px;
     padding-bottom: 81px;
@@ -17,6 +12,11 @@
   @include lg {
     padding-top: 90px;
     padding-bottom: 96px;
+  }
+
+  &__wrapper {
+    position: relative;
+    z-index: 4;
   }
 
   &__title {
@@ -109,24 +109,24 @@
     font-weight: bold;
     font-size: 32px;
 
-    &--naufor-icon {
-      margin-top: 26px;
-      margin-bottom: 17px;
-    }
-
     @include sm {
       margin-bottom: 25px;
-
-      &--naufor-icon {
-        margin-top: 4px;
-        margin-bottom: 17px;
-      }
     }
 
     @include lg {
       margin-bottom: 26px;
+    }
 
-      &--naufor-icon {
+    &--naufor-icon {
+      margin-top: 26px;
+      margin-bottom: 17px;
+
+      @include sm {
+        margin-top: 4px;
+        margin-bottom: 17px;
+      }
+
+      @include lg {
         margin-top: 0;
         margin-bottom: 16px;
       }

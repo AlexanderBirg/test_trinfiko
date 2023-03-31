@@ -12,6 +12,10 @@
     position: relative;
     margin-right: 19px;
 
+    @include sm {
+      margin-right: 30px;
+    }
+
     &:last-child {
       margin-right: 0;
     }
@@ -27,6 +31,11 @@
         background-color: rgba($color: #000, $alpha: 0.5);
         transform: translateY(-50%);
         content: "";
+
+        @include sm {
+          left: -21px;
+          width: 12px;
+        }
       }
     }
   }
@@ -37,6 +46,10 @@
     color: rgba($color: #000, $alpha: 0.5);
     font-size: 11px;
     transition: all $duration ease;
+
+    @include sm {
+      font-size: 12px;
+    }
 
     &:hover {
       color: $primary;
@@ -56,25 +69,8 @@
     margin-right: 12px;
     transition: all $duration ease;
     fill: rgba($color: #000, $alpha: 0.5);
-  }
 
-  @include sm {
-    &__item {
-      margin-right: 30px;
-
-      &:nth-child(n + 2) {
-        &::before {
-          left: -21px;
-          width: 12px;
-        }
-      }
-    }
-
-    &__link {
-      font-size: 12px;
-    }
-
-    &__icon {
+    @include sm {
       display: block;
     }
   }

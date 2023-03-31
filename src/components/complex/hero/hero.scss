@@ -4,6 +4,16 @@
   padding-bottom: 32px;
   background-color: $dark;
 
+  @include sm {
+    padding-top: 62px;
+    padding-bottom: 81px;
+  }
+
+  @include lg {
+    padding-top: 118px;
+    padding-bottom: 144px;
+  }
+
   &__container {
     position: relative;
     z-index: 5;
@@ -75,15 +85,5 @@
         margin-right: 31px;
       }
     }
-  }
-
-  @include sm {
-    padding-top: 62px;
-    padding-bottom: 81px;
-  }
-
-  @include lg {
-    padding-top: 118px;
-    padding-bottom: 144px;
   }
 }

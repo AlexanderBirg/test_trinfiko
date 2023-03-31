@@ -11,13 +11,13 @@
     cursor: pointer;
     transition: all $duration ease;
 
+    @include sm {
+      height: 65px;
+    }
+
     &:hover {
       background-color: $light;
       border-style: solid;
-    }
-
-    @include sm {
-      height: 65px;
     }
   }
 
@@ -53,8 +53,7 @@
   }
 
   &__reset-icon {
-    // display: none;
-    display: block;
+    display: none;
     width: 14px;
     height: 14px;
     margin-left: 28px;
@@ -82,6 +81,14 @@
     .upload-block {
       &__description {
         color: red;
+      }
+    }
+  }
+
+  &--valid {
+    .upload-block {
+      &__reset-icon {
+        display: block;
       }
     }
   }

@@ -22,6 +22,17 @@
     padding-top: 35px;
     padding-bottom: 29px;
 
+    @include sm {
+      flex-flow: row wrap;
+      padding-top: 58px;
+      padding-bottom: 46px;
+    }
+
+    @include lg {
+      padding-top: 56px;
+      padding-bottom: 59px;
+    }
+
     .footer {
       &__top-part-1 {
         display: flex;
@@ -88,56 +99,52 @@
         margin-left: auto;
         padding-top: 3px;
 
+        @include sm {
+          display: flex;
+          margin-left: 0;
+          padding-top: 0;
+        }
+
         &-text {
           display: none;
           font-weight: 400;
           font-size: 12px;
           line-height: 16px;
           text-transform: uppercase;
-        }
 
-        @include sm {
-          display: flex;
-          margin-left: 0;
-          padding-top: 0;
-
-          &-text {
+          @include sm {
             display: block;
             margin-right: 12px;
           }
+        }
 
-          &-list {
-            margin-top: -5px;
-          }
+        &-list {
+          margin-top: -5px;
         }
       }
 
       &__label-text {
         &--tel {
           flex: 0 0 188px;
+
+          @include sm {
+            flex: 0 0 345px;
+          }
+
+          @include lg {
+            flex: 0 0 auto;
+            margin-bottom: 34px;
+          }
         }
 
         &--email {
           flex: 0 0 157px;
-        }
 
-        @include sm {
-          &--tel {
+          @include sm {
             flex: 0 0 345px;
           }
 
-          &--email {
-            flex: 0 0 345px;
-          }
-        }
-
-        @include lg {
-          &--tel {
-            flex: 0 0 auto;
-            margin-bottom: 34px;
-          }
-
-          &--email {
+          @include sm {
             flex: 0 0 auto;
           }
         }
@@ -147,10 +154,26 @@
         &-list {
           &--left {
             flex: 0 0 188px;
+
+            @include sm {
+              flex: 0 0 252px;
+            }
+
+            @include lg {
+              flex: 0 0 243px;
+            }
           }
 
           &--right {
             flex: 0 0 157px;
+
+            @include sm {
+              flex: 0 0 123px;
+            }
+
+            @include lg {
+              flex: 0 0 243px;
+            }
           }
         }
 
@@ -173,50 +196,7 @@
             text-decoration: underline;
           }
         }
-
-        @include sm {
-          &-list {
-            &--left {
-              flex: 0 0 252px;
-            }
-
-            &--right {
-              flex: 0 0 123px;
-            }
-          }
-
-          &-item {
-            margin-bottom: 22px;
-          }
-
-          &-link {
-            font-size: 14px;
-          }
-        }
-
-        @include lg {
-          &-list {
-            &--left {
-              flex: 0 0 243px;
-            }
-
-            &--right {
-              flex: 0 0 243px;
-            }
-          }
-        }
       }
-    }
-
-    @include sm {
-      flex-flow: row wrap;
-      padding-top: 58px;
-      padding-bottom: 46px;
-    }
-
-    @include lg {
-      padding-top: 56px;
-      padding-bottom: 59px;
     }
   }
 
@@ -228,6 +208,17 @@
     padding-top: 14px;
     padding-bottom: 16px;
 
+    @include sm {
+      flex-direction: row;
+      padding-top: 23px;
+      padding-bottom: 26px;
+    }
+
+    @include lg {
+      padding-top: 34px;
+      padding-bottom: 37px;
+    }
+
     .footer {
       &__copyright {
         margin-bottom: 7px;
@@ -237,7 +228,13 @@
         line-height: 22px;
 
         @include sm {
+          flex: 0 0 345px;
+          margin-bottom: 0;
           font-size: 14px;
+        }
+
+        @include lg {
+          flex: 0 0 405px;
         }
       }
 
@@ -249,13 +246,18 @@
         text-decoration: underline;
         transition: all $duration ease;
 
+        @include sm {
+          flex: 0 0 345px;
+          font-size: 14px;
+        }
+
+        @include lg {
+          flex: 0 0 406px;
+        }
+
         &:hover {
           color: $primary;
           text-decoration: underline;
-        }
-
-        @include sm {
-          font-size: 14px;
         }
       }
 
@@ -263,45 +265,13 @@
         position: absolute;
         top: 20px;
         right: 18px;
-      }
-    }
 
-    @include sm {
-      flex-direction: row;
-      padding-top: 23px;
-      padding-bottom: 26px;
-
-      .footer {
-        &__copyright {
-          flex: 0 0 345px;
-          margin-bottom: 0;
-        }
-
-        &__privacy {
-          flex: 0 0 345px;
-        }
-
-        &__odone {
+        @include sm {
           top: 29px;
           right: 2px;
         }
-      }
-    }
 
-    @include lg {
-      padding-top: 34px;
-      padding-bottom: 37px;
-
-      .footer {
-        &__copyright {
-          flex: 0 0 405px;
-        }
-
-        &__privacy {
-          flex: 0 0 406px;
-        }
-
-        &__odone {
+        @include lg {
           top: 30px;
           right: 0;
         }
@@ -313,28 +283,28 @@
     padding-top: 24px;
     padding-bottom: 16px;
 
+    @include sm {
+      padding-top: 27px;
+      padding-bottom: 0;
+    }
+
+    @include lg {
+      padding-top: 29px;
+      padding-bottom: 0;
+    }
+
     p {
       margin-bottom: 13px;
       color: #444;
       font-weight: 400;
       font-size: 10px;
       line-height: 14px;
-    }
 
-    @include sm {
-      padding-top: 27px;
-      padding-bottom: 0;
-
-      p {
+      @include sm {
         margin-bottom: 20px;
         font-size: 12px;
         line-height: 20px;
       }
-    }
-
-    @include lg {
-      padding-top: 29px;
-      padding-bottom: 0;
     }
   }
 }

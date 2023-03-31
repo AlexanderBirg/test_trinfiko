@@ -111,14 +111,16 @@
   &__round-icon-item {
     margin-right: 15px;
 
+    @include sm {
+      margin-right: 20px;
+    }
+
     &:last-child {
       margin-right: 0;
     }
 
-    @include sm {
-      margin-right: 20px;
-
-      .round-icon {
+    .round-icon {
+      @include sm {
         &__wrapper {
           width: 35px;
           height: 35px;
@@ -146,6 +148,19 @@
     width: 30px;
     height: 18px;
     margin-left: 10px;
+
+    @include xs {
+      margin-left: 22px;
+    }
+
+    @include sm {
+      width: 35px;
+      margin-left: 34px;
+    }
+
+    @include lg {
+      display: none;
+    }
 
     &::before,
     &::after {
@@ -192,19 +207,6 @@
       span {
         opacity: 0;
       }
-    }
-
-    @include xs {
-      margin-left: 22px;
-    }
-
-    @include sm {
-      width: 35px;
-      margin-left: 34px;
-    }
-
-    @include lg {
-      display: none;
     }
   }
 

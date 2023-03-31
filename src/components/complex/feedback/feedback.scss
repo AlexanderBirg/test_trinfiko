@@ -65,20 +65,18 @@
     min-width: 165px;
     height: 45px;
 
-    .button {
-      &__arrow {
-        margin-left: 15px;
-      }
-    }
-
     @include sm {
       min-width: 200px;
       height: 50px;
       padding-right: 23px;
       padding-left: 34px;
+    }
 
-      .button {
-        &__arrow {
+    .button {
+      &__arrow {
+        margin-left: 15px;
+
+        @include sm {
           margin-left: auto;
         }
       }

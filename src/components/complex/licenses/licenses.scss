@@ -2,6 +2,16 @@
   padding-top: 37px;
   padding-bottom: 41px;
 
+  @include sm {
+    padding-top: 65px;
+    padding-bottom: 73px;
+  }
+
+  @include lg {
+    padding-top: 66px;
+    padding-bottom: 40px;
+  }
+
   &__title {
     margin-bottom: 23px;
 
@@ -26,10 +36,6 @@
   &__item {
     margin-bottom: 20px;
 
-    &:last-child {
-      margin-bottom: 0;
-    }
-
     @include sm {
       margin-bottom: 40px;
     }
@@ -37,20 +43,16 @@
     @include lg {
       flex: 1 1 calc(50% - 20px);
       margin-right: 40px;
+    }
 
-      &:nth-child(2n) {
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &:nth-child(2n) {
+      @include lg {
         margin-right: 0;
       }
     }
-  }
-
-  @include sm {
-    padding-top: 65px;
-    padding-bottom: 73px;
-  }
-
-  @include lg {
-    padding-top: 66px;
-    padding-bottom: 40px;
   }
 }

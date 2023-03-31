@@ -16,6 +16,23 @@
     content: "";
   }
 
+  &:hover {
+    &::before {
+      top: -10px;
+      height: calc(100% + 20px);
+      box-shadow: 5px 5px 55px 0 rgba(0, 0, 0, 0.16);
+    }
+  }
+
+  @include sm {
+    &:hover {
+      &::before {
+        top: -18px;
+        height: calc(100% + 36px);
+      }
+    }
+  }
+
   &__body {
     position: relative;
     min-height: 174px;
@@ -113,23 +130,6 @@
 
     @include sm {
       font-size: 12px;
-    }
-  }
-
-  &:hover {
-    &::before {
-      top: -10px;
-      height: calc(100% + 20px);
-      box-shadow: 5px 5px 55px 0 rgba(0, 0, 0, 0.16);
-    }
-  }
-
-  @include sm {
-    &:hover {
-      &::before {
-        top: -18px;
-        height: calc(100% + 36px);
-      }
     }
   }
 }

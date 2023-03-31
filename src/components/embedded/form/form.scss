@@ -2,43 +2,45 @@
   &__item {
     margin-bottom: 20px;
 
+    @include sm {
+      margin-bottom: 25px;
+    }
+
     &--upload {
       margin-top: 5px;
+
+      @include sm {
+        margin-top: 5px;
+        margin-bottom: 30px;
+      }
     }
 
     &--column {
       display: flex;
       flex-direction: column;
 
+      @include sm {
+        flex-direction: row;
+      }
+
       .input-block {
         margin-bottom: 20px;
+
+        @include sm {
+          width: 50%;
+          margin-right: 20px;
+          margin-bottom: 0;
+        }
+
+        &:nth-child(2n) {
+          @include sm {
+            margin-right: 0;
+          }
+        }
 
         &:last-child {
           margin-bottom: 0;
         }
-      }
-    }
-
-    @include sm {
-      margin-bottom: 25px;
-
-      &--upload {
-        margin-top: 5px;
-        margin-bottom: 30px;
-      }
-
-      .input-block {
-        width: 50%;
-        margin-right: 20px;
-        margin-bottom: 0;
-
-        &:nth-child(2n) {
-          margin-right: 0;
-        }
-      }
-
-      &--column {
-        flex-direction: row;
       }
     }
   }
