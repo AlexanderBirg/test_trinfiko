@@ -1,6 +1,11 @@
 .bread-crumbs {
-  padding: 16px 0;
+  padding: 10px 0 9px;
   background-color: #f6f6f6;
+
+  @include sm {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
 
   &__list {
     display: flex;
@@ -24,9 +29,9 @@
       &::before {
         position: absolute;
         top: 50%;
-        left: -15px;
+        left: -12px;
         display: block;
-        width: 11px;
+        width: 10px;
         height: 1px;
         background-color: rgba($color: #000, $alpha: 0.5);
         transform: translateY(-50%);

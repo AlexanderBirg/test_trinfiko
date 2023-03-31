@@ -1,8 +1,4 @@
 // Медиа-запросы
-// @include lg {
-//   background: red;
-// }
-
 @mixin xs {
   @media (min-width: 374.98px) { @content; }
 }
