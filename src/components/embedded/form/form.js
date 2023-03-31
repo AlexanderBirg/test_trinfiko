@@ -100,6 +100,22 @@ function validateUploadBlocks(uploadBlocks) {
   return errors;
 }
 
+// отображение имени выбранного файла
+function showFileName(file, uploadBlock) {
+  // получение расширения фалйа
+  const curArr = file.split('.');
+  const fileName = curArr[0];
+  const fileType = curArr[curArr.length - 1];
+
+  // вывод имени выранного файла
+  if (fileName.length > 12) {
+    // сокращение его, если слишком длинный
+    uploadBlock.querySelector('.upload-block__text').innerText = `${fileName.substr(0, 9)}...${fileType}`;
+  } else {
+    uploadBlock.querySelector('.upload-block__text').innerText = `${fileName}.${fileType}`;
+  }
+}
+
 // input-block
 if (inputBlockList) {
   inputBlockList.forEach((inputBlock) => {
@@ -154,14 +170,7 @@ if (uploadBlockList) {
     // если инпут уже заполнен
     if (input.value) {
       validateUploadBlock(uploadBlock);
-
-      // получение названия файла
-      const fileName = input.files[0].name;
-      // получение расширения фалйа
-      const curArr = fileName.split('.');
-      const fileType = curArr[curArr.length - 1];
-      // сокращения названия файла
-      uploadBlock.querySelector('.upload-block__text').innerText = fileName.length < 12 ? fileName : `${fileName.substr(0, 12)}...${fileType}`;
+      showFileName(input.files[0].name, uploadBlock);
     }
 
     // очистка
@@ -186,13 +195,7 @@ if (uploadBlockList) {
     input.addEventListener('change', () => {
       validateUploadBlock(uploadBlock);
 
-      // получение названия файла
-      const fileName = input.files[0].name;
-      // получение расширения фалйа
-      const curArr = fileName.split('.');
-      const fileType = curArr[curArr.length - 1];
-      // сокращения названия файла
-      uploadBlock.querySelector('.upload-block__text').innerText = fileName.length < 12 ? fileName : `${fileName.substr(0, 12)}...${fileType}`;
+      showFileName(input.files[0].name, uploadBlock);
     });
   });
 }
