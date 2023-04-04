@@ -1,0 +1,78 @@
+{% set requisitesList = [
+  {
+    'title': 'Полное наименование на русском языке',
+    'text': 'АО «УПРАВЛЯЮЩАЯ КОМПАНИЯ ТРИНФИКО»'
+  },
+  {
+    'title': 'Сокращенное наименование на русском языке',
+    'text': 'Акционерное общество «УПРАВЛЯЮЩАЯ КОМПАНИЯ ТРИНФИКО»'
+  },
+  {
+    'title': 'Адрес местонахождения',
+    'text': '129090, гор. Москва, пер. Ботанический, д. 5'
+  },
+  {
+    'title': 'Почтовый адрес',
+    'text': '129090, гор. Москва, пер. Ботанический, д. 5'
+  },
+  {
+    'title': 'ИНН / КПП',
+    'text': '7724136129 / 770201001'
+  },
+  {
+    'title': 'ОГРН',
+    'text': '1027700085126'
+  },
+  {
+    'title': 'ОКПО',
+    'text': '17808731'
+  },
+  {
+    'title': 'ОКАТО',
+    'text': '45286570000'
+  },
+  {
+    'title': 'ОКТМО',
+    'text': '45379000000'
+  },
+  {
+    'title': 'ОКОГУ',
+    'text': '4210014'
+  },
+  {
+    'title': 'ОКФС',
+    'text': 'Частная собственность'
+  },
+  {
+    'title': 'Банковские реквизиты',
+    'text': 'р/с 40701810300000000067 в АО «Россельхозбанк» г. Москва<br> к/с 30101810200000000111   БИК 044525111'
+  }
+] %}
+
+<section class="requisites">
+  <div class="wrapper">
+    <div class="requisites__content" data-scrollspy="fade-in">
+
+      <div class="requisites__head">
+        <img class="requisites__title-icon" src="images/complex/requisites/requisites__file.svg" alt="">
+        <h2 class="requisites__title title title--secondary">Реквизиты компании</h2>
+      </div>
+
+      <div class="requisites__body">
+        <div class="requisites__table requisites-table">
+          {% for item in requisitesList %}
+            <div class="requisites-table__row">
+              <div class="requisites-table__cell requisites-table__cell--title">
+                {{ item.title }}
+              </div>
+              <div class="requisites-table__cell">
+                {{ item.text }}
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

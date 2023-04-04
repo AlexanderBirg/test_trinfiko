@@ -1,0 +1,68 @@
+.requisites {
+  padding-top: 20px;
+  padding-bottom: 52px;
+
+  @include sm {
+    padding-top: 30px;
+    padding-bottom: 68px;
+  }
+
+  @include lg {
+    padding-top: 70px;
+    padding-bottom: 104px;
+  }
+
+  &__content {
+    padding: 40px 10px 32px;
+    background-color: #fff;
+    border-radius: 6px;
+
+    @include sm {
+      padding: 50px 41px 51px;
+    }
+
+    @include lg {
+      padding: 49px 50px 26px;
+    }
+  }
+
+  &__head {
+    display: flex;
+    align-items: center;
+    margin-bottom: 21px;
+
+    @include sm {
+      margin-bottom: 40px;
+    }
+
+    @include lg {
+      margin-bottom: 39px;
+    }
+  }
+
+  &__title {
+    margin-top: 2px;
+
+    @include sm {
+      margin-top: 0;
+    }
+  }
+
+  &__title-icon {
+    width: 19px;
+    height: 24px;
+    margin-right: 17px;
+    margin-left: 10px;
+
+    @include sm {
+      width: 26px;
+      height: 32px;
+      margin-right: 20px;
+      margin-left: 0;
+    }
+
+    @include lg {
+      margin-right: 24px;
+    }
+  }
+}

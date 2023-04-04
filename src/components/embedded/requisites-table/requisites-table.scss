@@ -1,0 +1,61 @@
+.requisites-table {
+  &__row {
+    display: flex;
+    flex-direction: column;
+    min-height: 70px;
+    padding: 5px 9px 18px;
+    border-radius: 6px;
+
+    @include sm {
+      min-height: 70px;
+      padding: 18px 25px;
+    }
+
+    @include lg {
+      flex-direction: row;
+      min-height: 60px;
+      padding: 18px 27px;
+    }
+
+    &:nth-child(2n + 1) {
+      padding: 18px 9px 14px;
+      background-color: #f5f5fc;
+
+      @include sm {
+        padding: 19px 25px 21px;
+      }
+    }
+  }
+
+  &__cell {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 22px;
+
+    @include sm {
+      font-size: 16px;
+    }
+
+    @include lg {
+      flex: 1 1 500px;
+    }
+
+    &--title {
+      margin-bottom: 7px;
+      font-weight: bold;
+      font-size: 14px;
+      line-height: 22px;
+
+      @include sm {
+        margin-bottom: 7px;
+        font-size: 16px;
+      }
+
+      @include lg {
+        flex: 0 1 392px;
+        align-self: flex-start;
+        margin-bottom: 0;
+      }
+    }
+  }
+}

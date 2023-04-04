@@ -1,0 +1,12 @@
+<div class="requisites-table">
+  {% for item in requisitesList %}
+    <div class="requisites-table__row">
+      <div class="requisites-table__cell requisites-table__cell--title">
+        {{ item.title }}
+      </div>
+      <div class="requisites-table__cell">
+        {{ item.text }}
+      </div>
+    </div>
+  {% endfor %}
+</div>

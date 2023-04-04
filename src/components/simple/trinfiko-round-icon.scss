@@ -1,0 +1,38 @@
+.trinfiko-round-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  padding: 6px;
+  background-color: #fff;
+  border-radius: 50%;
+  transform: translate(-17%, -30%);
+
+  @include sm {
+    width: 60px;
+    height: 60px;
+    padding: 7px;
+    transform: translate(-35%, -36%);
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: $primary;
+    border-radius: 50%;
+
+    svg {
+      width: 16px;
+      height: 17px;
+
+      @include sm {
+        width: 21px;
+        height: 23px;
+      }
+    }
+  }
+}

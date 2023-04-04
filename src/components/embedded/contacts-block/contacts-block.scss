@@ -1,0 +1,52 @@
+.contacts-block {
+  &__label {
+    color: $primary;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 1;
+
+    @include sm {
+      font-size: 16px;
+    }
+  }
+
+  &__text {
+    margin-top: 16px;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 26px;
+
+    @include sm {
+      margin-top: 23px;
+      font-size: 28px;
+      line-height: 34px;
+    }
+
+    &--link {
+      display: inline-block;
+      margin-top: 21px;
+      color: black;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 1;
+      transition: $duration;
+
+      @include sm {
+        margin-top: 11px;
+        font-size: 22px;
+      }
+
+      &:hover {
+        color: $secondary;
+      }
+    }
+  }
+
+  &__icon {
+    margin-top: 17px;
+
+    @include sm {
+      margin-top: 13px;
+    }
+  }
+}
