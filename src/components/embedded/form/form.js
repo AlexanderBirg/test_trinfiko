@@ -117,7 +117,7 @@ function showFileName(file, uploadBlock) {
 }
 
 // input-block
-if (inputBlockList) {
+if (inputBlockList.length) {
   inputBlockList.forEach((inputBlock) => {
     const input = inputBlock.querySelector('.input-block__input');
 
@@ -142,7 +142,7 @@ if (inputBlockList) {
 }
 
 // textarea-block
-if (textareaBlockList) {
+if (textareaBlockList.length) {
   textareaBlockList.forEach((textareaBlock) => {
     const textarea = textareaBlock.querySelector('.textarea-block__textarea');
 
@@ -162,7 +162,7 @@ if (textareaBlockList) {
 }
 
 // upload-block
-if (uploadBlockList) {
+if (uploadBlockList.length) {
   uploadBlockList.forEach((uploadBlock) => {
     const input = uploadBlock.querySelector('.upload-block__input');
     const resetButton = uploadBlock.querySelector('.upload-block__reset-button');

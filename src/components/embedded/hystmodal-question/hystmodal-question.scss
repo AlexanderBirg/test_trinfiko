@@ -23,10 +23,18 @@
         padding-left: 40px;
         border-radius: 8px;
       }
+
+      @include sm {
+        padding: 72px 80px 68px;
+      }
     }
   }
 
   &__title {
     margin-bottom: 26px;
+
+    @include lg {
+      margin-bottom: 25px;
+    }
   }
 }

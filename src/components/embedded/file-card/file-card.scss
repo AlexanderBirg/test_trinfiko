@@ -1,5 +1,8 @@
 .file-card {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   background-color: #fff;
   border-radius: 6px;
   transition: all $duration ease;
@@ -35,6 +38,7 @@
 
   &__body {
     position: relative;
+    flex-grow: 1;
     min-height: 174px;
     padding: 25px 19px 18px;
 

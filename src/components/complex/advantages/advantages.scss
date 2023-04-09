@@ -64,7 +64,7 @@
     margin-bottom: 23px;
 
     @include sm {
-      flex: 1 1 295px;
+      flex: 1 1 calc(50% - 30px);
       margin-right: 30px;
       margin-bottom: 38px;
 

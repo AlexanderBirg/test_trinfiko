@@ -69,6 +69,16 @@
   }
 
   &__button {
+    .button {
+      &__round-icon {
+        margin-left: 0;
+      }
+
+      &__text {
+        font-size: 14px;
+      }
+    }
+
     &-lk {
       margin-bottom: 14px;
     }

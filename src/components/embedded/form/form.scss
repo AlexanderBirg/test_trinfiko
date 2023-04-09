@@ -6,6 +6,13 @@
       margin-bottom: 25px;
     }
 
+    &--textarea {
+      @include lg {
+        margin-top: 33px;
+        margin-bottom: 21px;
+      }
+    }
+
     &--upload {
       margin-top: 5px;
 
@@ -67,10 +74,15 @@
 
   &__submit {
     width: 100%;
+    font-size: 14px;
 
     @include sm {
       width: auto;
       margin-left: auto;
+    }
+
+    @include lg {
+      margin-top: 5px;
     }
   }
 

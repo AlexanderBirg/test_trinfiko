@@ -34,7 +34,7 @@
     pointer-events: none;
 
     @include sm {
-      top: 13px;
+      top: 18px;
       left: 18px;
       font-size: 18px;
     }
@@ -44,6 +44,10 @@
     margin-top: 13px;
     color: #444;
     font-size: 11px;
+
+    @include sm {
+      margin-top: 17px;
+    }
   }
 
   &__invalid-description {
