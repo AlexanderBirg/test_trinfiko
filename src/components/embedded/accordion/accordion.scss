@@ -31,8 +31,9 @@
   }
 
   &__body {
+    box-sizing: border-box;
     max-height: 0;
-    padding: 0 20px 14px;
+    padding: 0 20px;
     overflow: hidden;
     font-weight: normal;
     font-size: 12px;
@@ -40,5 +41,9 @@
     background-color: #fff;
     opacity: 0;
     transition: ease $duration;
+
+    p {
+      margin-bottom: 14px;
+    }
   }
 }
