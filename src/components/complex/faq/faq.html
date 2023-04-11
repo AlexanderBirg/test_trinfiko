@@ -26,20 +26,14 @@
     <h1 class="faq__title title title--primary">Вопросы и ответы</h1>
 
     <div class="faq__body">
-      <ul class="faq__list">
+      <ul class="faq__list accordion">
         {% for item in faqList %}
-          <li class="faq__item accordion">
+          <li class="accordion__item">
             <div class="accordion__head">
-              <h4 class="accordion__title">{{ item.title }}</h4>
-              <div class="accordion__icon">
-                <span class="accordion__icon-open accordion__icon-open--active">+</span>
-                <span class="accordion__icon-close">-</span>
-              </div>
+              {{ item.title }}
             </div>
             <div class="accordion__body">
-              <p>
-                {{ item.text }}
-              </p>
+              {{ item.text }}
             </div>
           </li>
         {% endfor %}

@@ -138,6 +138,11 @@ if (inputBlockList.length) {
 
       validateInputBlock(inputBlock);
     });
+
+    // при каждом изменении валидируем данные
+    input.addEventListener('input', () => {
+      validateInputBlock(inputBlock);
+    });
   });
 }
 
