@@ -6,6 +6,7 @@ import './services/custom-libs/hystmodal/hystmodal.js';
 import './components/complex/header/header.js';
 import './components/embedded/form/form.js';
 import './components/embedded/accordion/accordion.js';
+import './components/embedded/faq-list/faq-list.js';
 
 // ПЛАВНАЯ ПРОКРУТКА К ЭЛЕМЕНТАМ
 const anchors = document.querySelectorAll('[data-my-anchor]');

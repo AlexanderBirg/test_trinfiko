@@ -1,0 +1,26 @@
+.faq {
+  padding-top: 17px;
+  padding-bottom: 42px;
+  background-color: #fff;
+
+  @include sm {
+    padding-top: 38px;
+    padding-bottom: 71px;
+  }
+
+  @include sm {
+    padding-bottom: 102px;
+  }
+
+  &__title {
+    margin-bottom: 17px;
+
+    @include sm {
+      margin-bottom: 29px;
+    }
+
+    @include lg {
+      margin-bottom: 38px;
+    }
+  }
+}

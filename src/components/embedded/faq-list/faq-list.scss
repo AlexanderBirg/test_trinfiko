@@ -1,0 +1,128 @@
+.faq-list {
+  .accordion {
+    &__item {
+      &--active {
+        .faq-list {
+          &__head {
+            background-color: #fff;
+          }
+
+          &__title {
+            color: $primary;
+          }
+
+          &__toggle {
+            background-color: #edeefc;
+
+            &-to-open {
+              display: none;
+            }
+
+            &-to-close {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__item {
+    margin-bottom: 7px;
+  }
+
+  &__head {
+    display: flex;
+    align-items: center;
+    padding: 0 15px 0 20px;
+    background-color: #f5f5fc;
+    border-radius: 6px;
+
+    @include sm {
+      padding-right: 26px;
+      padding-left: 29px;
+    }
+
+    @include lg {
+      padding-right: 39px;
+    }
+  }
+
+  &__counter {
+    display: none;
+    margin-right: 18px;
+
+    @include sm {
+      display: block;
+    }
+  }
+
+  &__title {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+
+    @include sm {
+      font-size: 16px;
+      line-height: 22px;
+    }
+
+    @include lg {
+      margin-top: 5px;
+    }
+  }
+
+  &__body {
+    padding: 0 20px;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 20px;
+    background-color: #fff;
+
+    @include sm {
+      padding-right: 66px;
+      padding-left: 29px;
+      font-size: 16px;
+      line-height: 22px;
+    }
+
+    @include lg {
+      padding-right: 79px;
+    }
+
+    p {
+      margin-bottom: 14px;
+
+      @include sm {
+        margin-bottom: 27px;
+      }
+    }
+  }
+
+  &__toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25px;
+    height: 25px;
+    margin-left: auto;
+    background-color: transparent;
+    border-radius: 50%;
+
+    @include sm {
+      width: 40px;
+      height: 40px;
+    }
+
+    &-to-open {
+      display: block;
+      color: $primary;
+      font-size: 21px;
+    }
+
+    &-to-close {
+      display: none;
+      font-size: 21px;
+    }
+  }
+}

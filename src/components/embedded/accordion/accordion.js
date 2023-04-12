@@ -16,9 +16,11 @@ if (accordions.length) {
       header.addEventListener('click', () => {
         // если указана настройка
         if (ac.getAttribute('data-accordion-single')) {
-          // закрытие всех спойлеров
+          // закрытие всех спойлеров крому текущего
           ac.querySelectorAll('.accordion__item').forEach((el) => {
-            closeItem(el);
+            if (el !== item) {
+              closeItem(el);
+            }
           });
         }
 
