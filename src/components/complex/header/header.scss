@@ -28,6 +28,16 @@
     @include xl {
       padding: 27px 0;
     }
+
+    .gorizontal-nav {
+      &__item {
+        &--active {
+          &::after {
+            bottom: -29px;
+          }
+        }
+      }
+    }
   }
 
   &__wrapper {
