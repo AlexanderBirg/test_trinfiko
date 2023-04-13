@@ -1,0 +1,160 @@
+.tariffs-desktop-table {
+  &__head {
+    display: flex;
+    height: 165px;
+    margin-bottom: 12px;
+
+    @include lg {
+      height: 135px;
+    }
+
+    &-row {
+      display: flex;
+      flex-grow: 1;
+      border-bottom: 1px solid #4aa0e1;
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      &--double {
+        .tariffs-desktop-table {
+          &__head {
+            &-cell {
+              padding-top: 14px;
+            }
+          }
+        }
+      }
+    }
+
+    &-cell {
+      flex: 1 1 auto;
+      height: 100%;
+      padding: 18px 20px 15px;
+      color: white;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 22px;
+      background-color: $primary;
+      border-right: 1px solid #4aa0e1;
+
+      @include lg {
+        padding: 21px 41px 24px;
+      }
+
+      &:last-child {
+        border-right: none;
+      }
+
+      &--small {
+        flex: 0 0 142px;
+
+        @include lg {
+          flex: 0 0 50%;
+        }
+      }
+    }
+  }
+
+  &__body {
+    display: flex;
+  }
+
+  &__column {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    margin-right: 13px;
+    overflow: hidden;
+    border: 1px solid #d5d5d5;
+    border-radius: 6px;
+
+    @include lg {
+      margin-right: 9px;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &--small {
+      flex: 0 0 295px;
+
+      @include lg {
+        flex: 0 0 495px;
+      }
+    }
+  }
+
+  &__row {
+    display: flex;
+    height: 70px;
+    background-color: #fff;
+
+    @include lg {
+      height: 50px;
+    }
+
+    &:nth-child(2n) {
+      background-color: #f8f8f8;
+    }
+
+    &:first-child {
+      height: 90px;
+
+      @include lg {
+        height: 63px;
+      }
+
+      .tariffs-desktop-table {
+        &__cell {
+          padding-top: 15px;
+        }
+      }
+    }
+
+    &:last-child {
+      height: 38px;
+
+      @include lg {
+        height: 36px;
+      }
+    }
+  }
+
+  &__cell {
+    display: flex;
+    flex: 1 1 auto;
+    align-items: center;
+    height: 100%;
+    padding-right: 20px;
+    padding-left: 20px;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 25px;
+    border-right: 1px solid #d5d5d5;
+
+    @include lg {
+      padding-right: 41px;
+      padding-left: 41px;
+    }
+
+    &:last-child {
+      border-right: none;
+    }
+
+    &--small {
+      flex: 0 0 142px;
+
+      @include lg {
+        flex: 0 0 50%;
+      }
+    }
+
+    &--title {
+      padding-right: 70px;
+      font-weight: bold;
+    }
+  }
+}

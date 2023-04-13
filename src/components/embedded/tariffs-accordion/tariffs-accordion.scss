@@ -1,0 +1,61 @@
+.tariffs-accordion {
+  .accordion {
+    &__item {
+      &--active {
+        .tariffs-accordion {
+          &__toggle {
+            &-icon {
+              transform: rotate(180deg);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__item {
+    position: relative;
+    margin-bottom: 0;
+    border-bottom: 1px solid #d5d5d5;
+  }
+
+  &__head {
+    display: flex;
+    align-items: center;
+    min-height: 78px;
+    padding: 0;
+    padding-right: 80px;
+    background-color: #fff;
+  }
+
+  &__title {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 25px;
+  }
+
+  &__body {
+    padding: 0;
+    background-color: #fff;
+  }
+
+  &__sub-title {
+    margin-bottom: 17px;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  &__toggle {
+    position: absolute;
+    top: calc(50% - 5px);
+    right: 15px;
+
+    &-icon {
+      width: 15px;
+      height: 8px;
+      transition: $duration ease;
+      fill: black;
+    }
+  }
+}

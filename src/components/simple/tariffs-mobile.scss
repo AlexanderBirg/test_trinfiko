@@ -1,0 +1,17 @@
+.tariffs-mobile {
+  @include sm {
+    display: none;
+  }
+
+  &__head {
+    @include out(14px);
+
+    padding-top: 12px;
+    padding-bottom: 14px;
+    color: white;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    background-color: $primary;
+  }
+}

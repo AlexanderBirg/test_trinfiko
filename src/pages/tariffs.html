@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    {% set pageTitle = 'Тарифы' %}
+    {% include "./components/complex/head/head.html" %}
+  </head>
+
+  <body class="page">
+
+    {% include "./components/complex/preloader/preloader.html" %}
+
+    {# begin header #}
+    {% include "./components/complex/header/header.html" %}
+    {% include "./components/complex/mobile-menu/mobile-menu.html" %}
+    {# end header #}
+
+
+    <div class="page__content">
+      {# end breadCrumbs #}
+      {% set breadCrumbsFirstCrumb = 'Главная' %}
+        {% set breadCrumbsList = [
+          {
+              'text': 'Тарифы',
+              'url': '\\'
+          }
+        ] %}
+        {% include "./components/complex/bread-crumbs/bread-crumbs.html" %}
+      {# end breadCrumbs #}
+      
+
+      {% include "./components/complex/tariffs/tariffs.html" %}
+
+      {% include "./components/complex/feedback/feedback.html" %}
+
+    </div>
+
+
+    {# begin footer #}
+    {% include "./components/complex/footer/footer.html" %}
+    {# end footer #}
+
+    {# begin modals #}
+    {% include "./components/embedded/hystmodal-rezume/hystmodal-rezume.html" %}
+    {% include "./components/embedded/hystmodal-message/hystmodal-message.html" %}
+    {# end modals #}
+  </body>
+</html>

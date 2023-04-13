@@ -1,0 +1,40 @@
+.tariffs {
+  padding-bottom: 42px;
+  background-color: #fff;
+
+  @include sm {
+    padding-bottom: 60px;
+  }
+
+  @include lg {
+    padding-bottom: 99px;
+  }
+
+  &__title {
+    padding-top: 17px;
+    padding-bottom: 15px;
+
+    @include sm {
+      padding-top: 38px;
+      padding-bottom: 28px;
+    }
+
+    @include lg {
+      padding-top: 58px;
+      padding-bottom: 26px;
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    margin-top: 30px;
+
+    @include sm {
+      margin-top: 46px;
+    }
+
+    @include lg {
+      margin-top: 37px;
+    }
+  }
+}

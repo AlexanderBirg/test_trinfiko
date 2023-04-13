@@ -1,0 +1,141 @@
+{% set tariffsList = [
+  {
+  'title': 'До 300 тыс. включительно',
+  'tariff_1': '0.140%',
+  'tariff_2': '0.120%'
+  },
+  {
+  'title': 'Свыше 300 тыс. до 1 млн включительно',
+  'tariff_1': '0.080%',
+  'tariff_2': '0.070%'
+  },
+  {
+  'title': 'Свыше 1 млн до 5 млн включительно',
+  'tariff_1': '0.060%',
+  'tariff_2': '0.050%'
+  },
+  {
+  'title': 'Свыше 5 млн до 20 млн включительно',
+  'tariff_1': '0.035%',
+  'tariff_2': '0.025%'
+  },
+  {
+  'title': 'Свыше 20 млн до 40 млн включительно',
+  'tariff_1': '0.025%',
+  'tariff_2': '0.015%'
+  },
+  {
+  'title': 'Свыше 40 млн',
+  'tariff_1': '0.015%',
+  'tariff_2': '0.010%'
+  }
+] %}
+
+<section class="tariffs">
+  <div class="wrapper">
+    <h1 class="title title--primary tariffs__title">Тарифы</h1>
+    <div class="tariffs-mobile">
+      <div class="tariffs-mobile__head">
+        Накопленный Торговый Оборот по договору
+        с Клиентом за Торговый день к моменту
+        совершения сделки, руб
+      </div>
+
+      <ul class="tariffs-accordion accordion" data-accordion-single="true">
+        {% for item in tariffsList %}
+          <li class="tariffs-accordion__item accordion__item">
+            <div class="tariffs-accordion__head accordion__head">
+              <div class="tariffs-accordion__title">{{ item.title }}</div>
+              <div class="tariffs-accordion__toggle">
+                <svg class="tariffs-accordion__toggle-icon">
+                  <use xlink:href="images/sprite.svg#arrow_2"></use>
+                </svg>
+              </div>
+            </div>
+            <div class="tariffs-accordion__body accordion__body">
+              <div class="tariffs-accordion__sub-title">Брокерская комиссия, в % от суммы сделки, включая НКД</div>
+              <div class="tariffs-mobile-table">
+                <div class="tariffs-mobile-table__row">
+                  <div class="tariffs-mobile-table__cell tariffs-mobile-table__cell--head tariffs-mobile-table__cell--small">Обычный тариф</div>
+                  <div class="tariffs-mobile-table__cell tariffs-mobile-table__cell--head">Тариф при предоставлении клиенту в пользование системы QUIK</div>
+                </div>
+                <div class="tariffs-mobile-table__row">
+                  <div class="tariffs-mobile-table__cell tariffs-mobile-table__cell--small">
+                    {{ item.tariff_1 }}
+                  </div>
+                  <div class="tariffs-mobile-table__cell">
+                    {{ item.tariff_2 }}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+
+    <div class="tariffs__desktop">
+      <div class="tariffs-desktop-table">
+        <div class="tariffs-desktop-table__head">
+          <div class="tariffs-desktop-table__column tariffs-desktop-table__column--small">
+            <div class="tariffs-desktop-table__head-row">
+              <div class="tariffs-desktop-table__head-cell">
+                Накопленный Торговый <br class="none-lg none-xl none-xxl">
+                Оборот по договору <br class="none-md">с Клиентом <br class="none-lg none-xl none-xxl">
+                за Торговый день к моменту <br class="none-md"><br class="none-lg none-xl none-xxl">
+                совершения сделки, руб <br class="none-lg none-xl none-xxl">
+              </div>
+            </div>
+          </div>
+          <div class="tariffs-desktop-table__column">
+            <div class="tariffs-desktop-table__head-row">
+              <div class="tariffs-desktop-table__head-cell">
+                Брокерская комиссия, в % от суммы сделки, включая НКД
+              </div>
+            </div>
+            <div class="tariffs-desktop-table__head-row tariffs-desktop-table__head-row--double">
+              <div class="tariffs-desktop-table__head-cell tariffs-desktop-table__head-cell--small">
+                Обычный тариф
+              </div>
+              <div class="tariffs-desktop-table__head-cell">
+                Тариф при предоставлении клиенту в пользование системы QUIK
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tariffs-desktop-table__body">
+          <div class="tariffs-desktop-table__column tariffs-desktop-table__column--small">
+            {% for item in tariffsList %}
+            <div class="tariffs-desktop-table__row">
+              <div class="tariffs-desktop-table__cell tariffs-desktop-table__cell--title">
+                {{ item.title }}
+              </div>
+            </div>
+            {% endfor %}
+            <div class="tariffs-desktop-table__row">
+              <div class="tariffs-desktop-table__cell"></div>
+            </div>
+          </div>
+          <div class="tariffs-desktop-table__column">
+            {% for item in tariffsList %}
+            <div class="tariffs-desktop-table__row">
+              <div class="tariffs-desktop-table__cell tariffs-desktop-table__cell--small">
+                {{ item.tariff_1 }}
+              </div>
+              <div class="tariffs-desktop-table__cell">
+                {{ item.tariff_2 }}
+              </div>
+            </div>
+            {% endfor %}
+            <div class="tariffs-desktop-table__row">
+              <div class="tariffs-desktop-table__cell tariffs-desktop-table__cell--small"></div>
+              <div class="tariffs-desktop-table__cell"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <a class="tariffs__link link" href="" download>Полные тарифы брокера (PDF)</a>
+  </div>
+</section>

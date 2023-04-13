@@ -1,0 +1,7 @@
+.tariffs-desktop {
+  display: none;
+
+  @include sm {
+    display: block;
+  }
+}

@@ -19,6 +19,8 @@
 @import "components/simple/hidden.scss";
 @import "components/simple/ya-map.scss";
 @import "components/simple/trinfiko-round-icon.scss";
+@import "components/simple/tariffs-mobile.scss";
+@import "components/simple/tariffs-desktop.scss";
 
 // ui
 @import "components/simple/ui/title.scss";
@@ -41,6 +43,9 @@
 @import "components/embedded/download-card/download-card.scss";
 @import "components/embedded/accordion/accordion.scss";
 @import "components/embedded/faq-list/faq-list.scss";
+@import "components/embedded/tariffs-accordion/tariffs-accordion.scss";
+@import "components/embedded/tariffs-mobile-table/tariffs-mobile-table.scss";
+@import "components/embedded/tariffs-desktop-table/tariffs-desktop-table.scss";
 
 // complex
 @import "components/complex/header/header.scss";
@@ -58,3 +63,4 @@
 @import "components/complex/contacts/contacts.scss";
 @import "components/complex/quik/quik.scss";
 @import "components/complex/faq/faq.scss";
+@import "components/complex/tariffs/tariffs.scss";

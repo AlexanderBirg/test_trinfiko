@@ -1,0 +1,35 @@
+.tariffs-mobile-table {
+  &__row {
+    display: flex;
+    border-bottom: 1px solid #d5d5d5;
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  &__cell {
+    flex: 1 1 auto;
+    padding: 13px 19px;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 22px;
+    border-right: 1px solid #d5d5d5;
+
+    &:last-child {
+      border-right: none;
+    }
+
+    &--head {
+      padding-right: 19px;
+      padding-left: 19px;
+      background-color: #f8f8f8;
+    }
+
+    &--small {
+      flex: 0 0 32%;
+      padding-right: 10px;
+      padding-left: 10px;
+    }
+  }
+}
