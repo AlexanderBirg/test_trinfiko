@@ -9,7 +9,7 @@
 
   @include lg {
     padding-top: 66px;
-    padding-bottom: 40px;
+    padding-bottom: 80px;
   }
 
   &__title {
@@ -43,6 +43,10 @@
     @include lg {
       flex: 1 1 calc(50% - 20px);
       margin-right: 40px;
+
+      &:nth-last-child(2) {
+        margin-bottom: 0;
+      }
     }
 
     &:last-child {
