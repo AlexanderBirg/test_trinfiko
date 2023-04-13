@@ -28,7 +28,7 @@
     <div class="faq__body">
       <ul class="faq-list accordion" data-accordion-single="true">
         {% for item in faqList %}
-        <li class="faq-list__item accordion__item">
+        <li class="faq-list__item accordion__item hidden" data-scrollspy="fade-in">
           <div class="faq-list__head accordion__head">
             <div class="faq-list__counter">01.</div>
             <div class="faq-list__title">{{ item.title }}</div>

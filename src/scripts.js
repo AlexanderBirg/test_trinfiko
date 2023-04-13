@@ -39,35 +39,28 @@ lazyLoadInstance.update();
 // АНИМАЦИЯ ПОЯВЛЕНИЯ
 const scrollspyElems = document.querySelectorAll('[data-scrollspy]');
 
-// Добавляем класс hidden, чтобы скрыть блоки
-scrollspyElems.forEach((elem) => {
-  elem.classList.add('hidden');
-});
+// создание обсервера
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    const animationType = entry.target.getAttribute('data-scrollspy');
 
-// Обработчик события scroll
-window.addEventListener('scroll', () => {
-  // Переменная для хранения текущего индекса блока
-  let index = 0;
+    if (entry.isIntersecting) {
+      setTimeout(() => {
+        entry.target.classList.remove('hidden');
 
-  // Функция для появления блоков с задержкой
-  function showBlocks() {
-    // Проверяем, есть ли еще блоки, которые нужно показать
-    if (index < scrollspyElems.length) {
-      // Получаем текущий блок
-      const elem = scrollspyElems[index];
-
-      // Если блок уже появился на экране (отступ 200 px), то добавляем ему класс анимации
-      if (elem.getBoundingClientRect().top + 200 < window.innerHeight) {
-        const animationType = elem.getAttribute('data-scrollspy');
-
-        elem.classList.remove('hidden');
-        elem.classList.add(animationType);
-        index++; // Увеличиваем индекс для следующего блока
-      }
-      setTimeout(showBlocks, 300); // Вызываем функцию снова через 200 мс
+        if (animationType) {
+          entry.target.classList.add(animationType);
+        } else {
+          entry.target.style.opacity = '1';
+        }
+      }, 500);
     }
-  }
-  showBlocks(); // Вызываем функцию для первоначального запуска
+  });
+}, { threshold: 0.2 });
+
+// передаем ему элементы
+scrollspyElems.forEach((el) => {
+  observer.observe(el);
 });
 
 // ЯНДЕКС КАРТА
