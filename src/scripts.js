@@ -45,23 +45,43 @@ const observer = new IntersectionObserver((entries) => {
     const animationType = entry.target.getAttribute('data-scrollspy');
 
     if (entry.isIntersecting) {
-      setTimeout(() => {
-        entry.target.classList.remove('hidden');
+      if (entry.target.classList.contains('for-childs')) {
+        // анимация для списка элементов
+        const childs = entry.target.children;
 
-        if (animationType) {
-          entry.target.classList.add(animationType);
-        } else {
-          entry.target.style.opacity = '1';
-        }
-      }, 500);
+        childs.forEach((child, index) => {
+          setTimeout(() => {
+            child.classList.remove('hidden');
+
+            if (animationType) {
+              child.classList.add(animationType);
+            } else {
+              child.style.opacity = '1';
+            }
+          }, 300 * index);
+        });
+      } else {
+        // анимация для больших элементов
+        setTimeout(() => {
+          entry.target.classList.remove('hidden');
+
+          if (animationType) {
+            entry.target.classList.add(animationType);
+          } else {
+            entry.target.style.opacity = '1';
+          }
+        }, 500);
+      }
     }
   });
 }, { threshold: 0.2 });
 
-// передаем ему элементы
-scrollspyElems.forEach((el) => {
-  observer.observe(el);
-});
+window.onload = () => {
+  // передаем ему элементы
+  scrollspyElems.forEach((el) => {
+    observer.observe(el);
+  });
+};
 
 // ЯНДЕКС КАРТА
 /* global ymaps */

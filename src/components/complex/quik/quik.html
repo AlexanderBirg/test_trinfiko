@@ -19,10 +19,10 @@
 <section class="quik">
   <div class="wrapper">
     <h1 class="quik__title title title--primary">QUIK</h1>
-    <ul class="quik__list">
+    <ul class="quik__list for-childs" data-scrollspy="fade-in">
       {% for item in quikList %}
-      <li class="quik__item">
-        <div class="download-card hidden" data-scrollspy="fade-in">
+      <li class="quik__item hidden">
+        <div class="download-card">
           <div class="download-card__body">
             <div class="download-card__text">{{ item.title }}</div>
           </div>
